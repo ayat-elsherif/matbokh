@@ -525,13 +525,13 @@ aside {
   margin-right: 5px;
 }
 
-.contact-from {
+.contact-from, .signUp-form, .signIn-form {
   background: #fff;
 }
-.contact-from form {
+.contact-from form, .signUp-form form, .signIn-form form {
   padding: 20px 25px;
 }
-.contact-from form input, .contact-from form select, .contact-from form textarea {
+.contact-from form input, .contact-from form textarea, .signUp-form form input, .signUp-form form textarea, .signIn-form form input, .signIn-form form textarea {
   margin-bottom: 20px;
   padding: 5px 15px;
   background: #f6f6f5;
@@ -539,7 +539,7 @@ aside {
   outline: none;
   border: none;
 }
-.contact-from form input[type=submit], .contact-from form select[type=submit], .contact-from form textarea[type=submit] {
+.contact-from form input[type=submit], .contact-from form textarea[type=submit], .signUp-form form input[type=submit], .signUp-form form textarea[type=submit], .signIn-form form input[type=submit], .signIn-form form textarea[type=submit] {
   margin-top: 20px;
   font-weight: 700;
   padding: 17px;
@@ -547,6 +547,38 @@ aside {
   outline: none;
   text-transform: uppercase;
   font-size: 14px;
+}
+
+.outline-select {
+  background: #fff;
+  margin-bottom: 20px;
+}
+.outline-select select {
+  width: 100%;
+  padding: 9px 20px;
+  background: transparent;
+  z-index: 1;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border: 1px solid #e6e6e6;
+}
+.outline-select.shipping-select {
+  width: 100%;
+}
+@media (min-width: 992px) {
+  .outline-select.shipping-select {
+    width: 50%;
+    float: left;
+  }
+}
+.outline-select .select-icon {
+  top: 0;
+  right: 0;
+  padding: 9px 20px;
+  background: #fb524f;
+  color: #fff;
+  border: 1px solid #e6e6e6;
+  border-radius: 0px 3px 3px 0px;
 }
 
 .food-item:hover .food-thumb {
@@ -838,7 +870,7 @@ aside {
     line-height: 100px;
   }
 }
-.single .section-wrapper .popular-chef-widget .contact-from {
+.single .section-wrapper .popular-chef-widget .contact-from, .single .section-wrapper .popular-chef-widget .signUp-form, .single .section-wrapper .popular-chef-widget .signIn-form {
   box-shadow: 0 0 10px rgba(136, 136, 136, 0.1);
 }
 
@@ -1794,25 +1826,25 @@ aside {
 }
 
 /* @@@@@@@@@@@@@  Extend Property CSS Writing Now  @@@@@@@@@@@@@@ */
-.footer .footer-top .footer-area .footer-menu ul, .shop-cart .section-wrapper .cart-bottom .shiping-box .cart-overview ul li, .shop-cart .section-wrapper .cart-bottom .cart-checkout-box .cart-checkout, .shop-cart .section-wrapper .cart-bottom .cart-checkout-box, .shop-cart .section-wrapper .cart-top table tbody tr td.product-item, .shop-product-wrap .product-list-item, .shop-product-wrap .product-item .product-thumb .product-action-link, .shop-product-wrap .product-list-item .product-thumb .product-action-link, .widget.widget-tags ul.widget-wrapper, .recepi-single.recepi-single .section-wrapper .post-item .post-inner .post-content .step-mathod .step-wrapper .step-item .step-inner, .recepi-single.recepi-single .section-wrapper .post-item .post-inner .post-content .make-product .right ul li, .recepi-single.recepi-single .section-wrapper .post-item .post-inner .post-content .make-product, .blog-section.blog-single .section-wrapper .comment-respond .add-comment .comment-form, .recepi-single.blog-single .section-wrapper .comment-respond .add-comment .comment-form, .blog-section.blog-single .section-wrapper .authors, .recepi-single.blog-single .section-wrapper .authors, .blog-section.blog-single .section-wrapper .navigations-part, .recepi-single.blog-single .section-wrapper .navigations-part, .blog-section.blog-single .section-wrapper .post-item .post-inner .post-content .tags-section .tags, .recepi-single.blog-single .section-wrapper .post-item .post-inner .post-content .tags-section .tags, .blog-section.blog-single .section-wrapper .post-item .post-inner .post-content .tags-section, .recepi-single.blog-single .section-wrapper .post-item .post-inner .post-content .tags-section, .blog-section.blog-page .section-wrapper .post-item.slider-post .post-inner .post-thumb.post-thumb-slider, .recepi-single.blog-page .section-wrapper .post-item.slider-post .post-inner .post-thumb.post-thumb-slider, .blog-section .section-wrapper .blog-right, .recepi-single .section-wrapper .blog-right, .contact-information .section-wrapper .post-item, .restaurant-section .section-wrapper .top-restaurant, .review .section-wrapper .related .tabcontent .review .client-review .review-form form .ratings, .review .section-wrapper .related .tabcontent .review .content li .post-content .entry-meta, .review .section-wrapper .related .tabcontent .review .content li, .review .section-wrapper .related .tabcontent .spe-shop .tec-spe ul li, .review .section-wrapper .related .tabcontent .Description .addimage, .video-section .section-wrapper .video-tabbar .tabbar-body .tab-bar .tablinks, .video-section .section-wrapper .video-tabbar .tabbar-title, .news-letter .section-wrapper, .sponsor-section .section-wrapper .sponsor-slider .sponsor-thumb, .booking-table .section-wrapper form, .product.style-2 .section-wrapper .tab-bar .tablinks, .product.style-2 .section-wrapper .tab-bar, .service-section .section-wrapper .service-item .service-inner, .service-section .section-wrapper, .about.home-4 .section-wrapper .about-content-part .ab-left-part .ab-location .ab-loc-item .ab-loc-inner, .testimonial.style-2 .section-wrapper .carousel-indicators, .testimonial .section-wrapper .carousel-indicators, .contact-us .contact-home-chef .section-wrapper, .food-apps .apps-content .section-header .food-btn-group a, .food-apps .apps-content .section-header .food-btn-group, .food-services .section-wrapper, .banner.style-3 .swiper-container.gallery-top .banner-item .banner-inner, .banner.style-2 .banner-area, .banner .banner-area .banner-content ul, .banner .banner-area .banner-content form, .mobile-menu .menu .mobile-menu-area .mobile-menu-area-inner, .author-account, .cart-option .cart-content .cart-scr-bottom ul li, .cart-option .cart-content .cart-scr .cart-con-item .cart-item .cart-inner .cart-bottom, .cart-option .cart-content .cart-scr .cart-con-item .cart-item .cart-inner .cart-top, .cart-option .cart-content .cart-title, .city-lang, .header-section.header-3 .header-bottom, .header-section.header-3 .header-top, .header-section .main-menu ul, .header-section .header-area, .section-header.style-2, .meta-tag, .meta-post ul, .meta-post ul li, .single .section-wrapper .chef-item .chef-inner .chef-content, .single .section-wrapper .chef-item .chef-inner .chef-content .chef-desc .chef-desc-top, .single .section-wrapper .chef-item .chef-inner .chef-content .chef-desc .chef-desc-top .scocial-share, .single .section-wrapper .related .tab-bar, .single .section-wrapper .popular-chef-widget .food-category .section-wrapper, .food-quyality .section-wrapper ul, .p-food-item .p-food-inner .p-food-content .del-time, .p-food-item .p-food-inner .p-food-content .p-food-footer, .p-food-item.style-2 .p-food-inner, .p-food-group, .chef-item .chef-inner .chef-content .chef-footer, .product-item.style-2, .product-item.style-2 .product-content .product-title, .paginations ul li a {
+.footer .footer-top .footer-area .footer-menu ul, .shop-cart .section-wrapper .cart-bottom .shiping-box .cart-overview ul li, .shop-cart .section-wrapper .cart-bottom .cart-checkout-box .cart-checkout, .shop-cart .section-wrapper .cart-bottom .cart-checkout-box, .shop-cart .section-wrapper .cart-top table tbody tr td.product-item, .shop-product-wrap .product-list-item, .shop-product-wrap .product-item .product-thumb .product-action-link, .shop-product-wrap .product-list-item .product-thumb .product-action-link, .widget.widget-tags ul.widget-wrapper, .recepi-single.recepi-single .section-wrapper .post-item .post-inner .post-content .step-mathod .step-wrapper .step-item .step-inner, .recepi-single.recepi-single .section-wrapper .post-item .post-inner .post-content .make-product .right ul li, .recepi-single.recepi-single .section-wrapper .post-item .post-inner .post-content .make-product, .blog-section.blog-single .section-wrapper .comment-respond .add-comment .comment-form, .recepi-single.blog-single .section-wrapper .comment-respond .add-comment .comment-form, .blog-section.blog-single .section-wrapper .authors, .recepi-single.blog-single .section-wrapper .authors, .blog-section.blog-single .section-wrapper .navigations-part, .recepi-single.blog-single .section-wrapper .navigations-part, .blog-section.blog-single .section-wrapper .post-item .post-inner .post-content .tags-section .tags, .recepi-single.blog-single .section-wrapper .post-item .post-inner .post-content .tags-section .tags, .blog-section.blog-single .section-wrapper .post-item .post-inner .post-content .tags-section, .recepi-single.blog-single .section-wrapper .post-item .post-inner .post-content .tags-section, .blog-section.blog-page .section-wrapper .post-item.slider-post .post-inner .post-thumb.post-thumb-slider, .recepi-single.blog-page .section-wrapper .post-item.slider-post .post-inner .post-thumb.post-thumb-slider, .blog-section .section-wrapper .blog-right, .recepi-single .section-wrapper .blog-right, .contact-information .section-wrapper .post-item, .restaurant-section .section-wrapper .top-restaurant, .review .section-wrapper .related .tabcontent .review .client-review .review-form form .ratings, .review .section-wrapper .related .tabcontent .review .content li .post-content .entry-meta, .review .section-wrapper .related .tabcontent .review .content li, .review .section-wrapper .related .tabcontent .spe-shop .tec-spe ul li, .review .section-wrapper .related .tabcontent .Description .addimage, .video-section .section-wrapper .video-tabbar .tabbar-body .tab-bar .tablinks, .video-section .section-wrapper .video-tabbar .tabbar-title, .news-letter .section-wrapper, .sponsor-section .section-wrapper .sponsor-slider .sponsor-thumb, .booking-table .section-wrapper form, .product.style-2 .section-wrapper .tab-bar .tablinks, .product.style-2 .section-wrapper .tab-bar, .service-section .section-wrapper .service-item .service-inner, .service-section .section-wrapper, .about.home-4 .section-wrapper .about-content-part .ab-left-part .ab-location .ab-loc-item .ab-loc-inner, .testimonial.style-2 .section-wrapper .carousel-indicators, .testimonial .section-wrapper .carousel-indicators, .contact-us .contact-home-chef .section-wrapper, .sign-up .contact-home-chef .section-wrapper, .sign-in .contact-home-chef .section-wrapper, .food-apps .apps-content .section-header .food-btn-group a, .food-apps .apps-content .section-header .food-btn-group, .food-services .section-wrapper, .banner.style-3 .swiper-container.gallery-top .banner-item .banner-inner, .banner.style-2 .banner-area, .banner .banner-area .banner-content ul, .banner .banner-area .banner-content form, .mobile-menu .menu .mobile-menu-area .mobile-menu-area-inner, .author-account, .cart-option .cart-content .cart-scr-bottom ul li, .cart-option .cart-content .cart-scr .cart-con-item .cart-item .cart-inner .cart-bottom, .cart-option .cart-content .cart-scr .cart-con-item .cart-item .cart-inner .cart-top, .cart-option .cart-content .cart-title, .city-lang, .header-section.header-3 .header-bottom, .header-section.header-3 .header-top, .header-section .main-menu ul, .header-section .header-area, .section-header.style-2, .meta-tag, .meta-post ul, .meta-post ul li, .single .section-wrapper .chef-item .chef-inner .chef-content, .single .section-wrapper .chef-item .chef-inner .chef-content .chef-desc .chef-desc-top, .single .section-wrapper .chef-item .chef-inner .chef-content .chef-desc .chef-desc-top .scocial-share, .single .section-wrapper .related .tab-bar, .single .section-wrapper .popular-chef-widget .food-category .section-wrapper, .food-quyality .section-wrapper ul, .p-food-item .p-food-inner .p-food-content .del-time, .p-food-item .p-food-inner .p-food-content .p-food-footer, .p-food-item.style-2 .p-food-inner, .p-food-group, .chef-item .chef-inner .chef-content .chef-footer, .product-item.style-2, .product-item.style-2 .product-content .product-title, .paginations ul li a {
   display: flex;
   flex-wrap: wrap;
 }
 
-.footer .footer-bottom p a span, .footer .footer-bottom p a, .footer .footer-bottom, .footer .footer-top, .footer, .shop-cart .section-wrapper .cart-bottom .shiping-box .calculate-shiping .outline-select select, .shop-cart .section-wrapper .cart-bottom .shiping-box .calculate-shiping .outline-select, .shop-product-wrap .product-item .product-thumb, .shop-product-wrap .product-list-item .product-thumb, .widget.widget-search .search-wrapper, .recepi-single.recepi-single .section-wrapper .post-item .post-inner .post-content .make-product .left ul li, .recepi-single.recepi-single .section-wrapper .post-item .post-inner .post-content .make-product .right ul li, .blog-section.blog-single .section-wrapper .post-item .post-inner .post-content blockquote, .recepi-single.blog-single .section-wrapper .post-item .post-inner .post-content blockquote, .blog-section.blog-page .section-wrapper .post-item.qute-post .post-inner .post-thumb, .recepi-single.blog-page .section-wrapper .post-item.qute-post .post-inner .post-thumb, .blog-section.blog-page .section-wrapper .post-item.slider-post .post-inner .post-thumb.post-thumb-slider, .recepi-single.blog-page .section-wrapper .post-item.slider-post .post-inner .post-thumb.post-thumb-slider, .blog-section.trending .section-wrapper .post-item .post-inner .post-thumb, .recepi-single.trending .section-wrapper .post-item .post-inner .post-thumb, .contact-information .section-wrapper, .review .section-wrapper .related .tabcontent .p-food-item, .review .section-wrapper .related .tabcontent .product-item, .shop-page.single .section-wrapper .shop-single .shop-single-content .desc ul li, .coming-soon .coming-area .section-wrapper .countdown li h3, .video-section .section-wrapper .video-tabbar .tabbar-body .tab-bar .tablinks .video-thumb, .video-section .section-wrapper .video-tabbar .tabbar-title, .gallery-section .gallery-area .section-wrapper .gallery-item .gallery-thumb, .news-letter .section-wrapper .news-form form label, .news-letter .section-wrapper .news-form form, .booking-table .section-wrapper form, .booking-table .section-wrapper, .booking-table, .service-section .section-wrapper .service-item .service-inner .service-content *, .service-section .section-wrapper .service-item .service-inner .service-content, .about.home-4 .section-wrapper .about-content-part .ab-left-part .ab-location, .about.home-4 .section-wrapper .about-thumb img, .about.home-4 .section-wrapper .about-thumb, .about, .testimonial.home-4 .section-wrapper .testi-wrapper .testi-slider, .testimonial .section-wrapper, .contact-us, .food-apps, .food-category .food-box .section-wrapper, .banner.style-4 .banner-slider-2, .banner.style-3 .swiper-container.gallery-thumbs .banner-bitem .banner-binner, .banner.style-3 .swiper-container.gallery-top .banner-item .banner-inner .banner-thumb, .banner.style-2 .left-side, .banner .banner-area .banner-content ul li, .banner .banner-area .banner-content form .codexcoder-selectoption, .banner .banner-area .banner-content form, .banner, .mobile-menu .menu .mobile-menu-area .mobile-menu-area-inner .mobile-search, .mobile-menu .menu .mobile-menu-area .mobile-menu-area-inner ul li, .mobile-menu .mobile-header .header-bar, .page-header .page-title .breadcrumb li, .page-header, .cart-option, .header-section.header-3 .header-top .menu-search-form .widget-search, .header-section.header-2, .header-section .main-menu ul li, .header-section, .dd-icon-down, .dd-icon-right, .food-btn, .meta-tag .categori, .single .section-wrapper .chef-item, .single .section-wrapper .related .tab-bar .tablinks, .video-thumb, .service-item .service-inner .service-thumb, .p-food-item .p-food-inner .p-food-thumb, .p-food-item .p-food-inner .p-food-content, .p-food-item .p-food-inner .p-food-content .del-time li, .p-food-item .p-food-inner .p-food-content .del-time li .time-tooltip .time-tooltip-holder, .p-food-group a, .chef-item .chef-inner .chef-content, .product-item .product-thumb, .cart-plus-minus, .bg-table, .paginations ul li a {
+.footer .footer-bottom p a span, .footer .footer-bottom p a, .footer .footer-bottom, .footer .footer-top, .footer, .shop-product-wrap .product-item .product-thumb, .shop-product-wrap .product-list-item .product-thumb, .widget.widget-search .search-wrapper, .recepi-single.recepi-single .section-wrapper .post-item .post-inner .post-content .make-product .left ul li, .recepi-single.recepi-single .section-wrapper .post-item .post-inner .post-content .make-product .right ul li, .blog-section.blog-single .section-wrapper .post-item .post-inner .post-content blockquote, .recepi-single.blog-single .section-wrapper .post-item .post-inner .post-content blockquote, .blog-section.blog-page .section-wrapper .post-item.qute-post .post-inner .post-thumb, .recepi-single.blog-page .section-wrapper .post-item.qute-post .post-inner .post-thumb, .blog-section.blog-page .section-wrapper .post-item.slider-post .post-inner .post-thumb.post-thumb-slider, .recepi-single.blog-page .section-wrapper .post-item.slider-post .post-inner .post-thumb.post-thumb-slider, .blog-section.trending .section-wrapper .post-item .post-inner .post-thumb, .recepi-single.trending .section-wrapper .post-item .post-inner .post-thumb, .contact-information .section-wrapper, .review .section-wrapper .related .tabcontent .p-food-item, .review .section-wrapper .related .tabcontent .product-item, .shop-page.single .section-wrapper .shop-single .shop-single-content .desc ul li, .coming-soon .coming-area .section-wrapper .countdown li h3, .video-section .section-wrapper .video-tabbar .tabbar-body .tab-bar .tablinks .video-thumb, .video-section .section-wrapper .video-tabbar .tabbar-title, .gallery-section .gallery-area .section-wrapper .gallery-item .gallery-thumb, .news-letter .section-wrapper .news-form form label, .news-letter .section-wrapper .news-form form, .booking-table .section-wrapper form, .booking-table .section-wrapper, .booking-table, .service-section .section-wrapper .service-item .service-inner .service-content *, .service-section .section-wrapper .service-item .service-inner .service-content, .about.home-4 .section-wrapper .about-content-part .ab-left-part .ab-location, .about.home-4 .section-wrapper .about-thumb img, .about.home-4 .section-wrapper .about-thumb, .about, .testimonial.home-4 .section-wrapper .testi-wrapper .testi-slider, .testimonial .section-wrapper, .contact-us, .sign-up, .sign-in, .food-apps, .food-category .food-box .section-wrapper, .banner.style-4 .banner-slider-2, .banner.style-3 .swiper-container.gallery-thumbs .banner-bitem .banner-binner, .banner.style-3 .swiper-container.gallery-top .banner-item .banner-inner .banner-thumb, .banner.style-2 .left-side, .banner .banner-area .banner-content ul li, .banner .banner-area .banner-content form .codexcoder-selectoption, .banner .banner-area .banner-content form, .banner, .mobile-menu .menu .mobile-menu-area .mobile-menu-area-inner .mobile-search, .mobile-menu .menu .mobile-menu-area .mobile-menu-area-inner ul li, .mobile-menu .mobile-header .header-bar, .page-header .page-title .breadcrumb li, .page-header, .cart-option, .header-section.header-3 .header-top .menu-search-form .widget-search, .header-section.header-2, .header-section .main-menu ul li, .header-section, .dd-icon-down, .dd-icon-right, .food-btn, .meta-tag .categori, .outline-select, .outline-select select, .single .section-wrapper .chef-item, .single .section-wrapper .related .tab-bar .tablinks, .video-thumb, .service-item .service-inner .service-thumb, .p-food-item .p-food-inner .p-food-thumb, .p-food-item .p-food-inner .p-food-content, .p-food-item .p-food-inner .p-food-content .del-time li, .p-food-item .p-food-inner .p-food-content .del-time li .time-tooltip .time-tooltip-holder, .p-food-group a, .chef-item .chef-inner .chef-content, .product-item .product-thumb, .cart-plus-minus, .bg-table, .paginations ul li a {
   position: relative;
 }
 
-.footer .footer-bottom p a::after, .shop-cart .section-wrapper .cart-bottom .shiping-box .calculate-shiping .outline-select .select-icon, .shop-product-wrap .product-item .product-thumb .product-action-link, .shop-product-wrap .product-list-item .product-thumb .product-action-link, .shop-product-wrap .product-item .product-thumb::after, .shop-product-wrap .product-list-item .product-thumb::after, .widget.widget-search .search-wrapper button, .recepi-single.recepi-single .section-wrapper .post-item .post-inner .post-content .make-product .left ul li.active::before, .recepi-single.recepi-single .section-wrapper .post-item .post-inner .post-content .make-product .left ul li.deactive::before, .recepi-single.recepi-single .section-wrapper .post-item .post-inner .post-content .make-product .right ul li.active::before, .recepi-single.recepi-single .section-wrapper .post-item .post-inner .post-content .make-product .right ul li.deactive::before, .blog-section.blog-single .section-wrapper .post-item .post-inner .post-content blockquote::before, .recepi-single.blog-single .section-wrapper .post-item .post-inner .post-content blockquote::before, .blog-section.blog-page .section-wrapper .post-item.qute-post .post-inner .post-thumb .qute-content, .recepi-single.blog-page .section-wrapper .post-item.qute-post .post-inner .post-thumb .qute-content, .blog-section.blog-page .section-wrapper .post-item.slider-post .post-inner .post-thumb.post-thumb-slider .post-thumb-slider-next, .blog-section.blog-page .section-wrapper .post-item.slider-post .post-inner .post-thumb.post-thumb-slider .post-thumb-slider-prev, .recepi-single.blog-page .section-wrapper .post-item.slider-post .post-inner .post-thumb.post-thumb-slider .post-thumb-slider-next, .recepi-single.blog-page .section-wrapper .post-item.slider-post .post-inner .post-thumb.post-thumb-slider .post-thumb-slider-prev, .blog-section.trending .section-wrapper .post-item .post-inner .post-thumb .post-content, .recepi-single.trending .section-wrapper .post-item .post-inner .post-thumb .post-content, .review .section-wrapper .related .tabcontent .p-food-item::after, .review .section-wrapper .related .tabcontent .product-item::after, .shop-page.single .section-wrapper .shop-single .shop-single-content .desc ul li::before, .coming-soon .coming-area .section-wrapper .countdown li h3::after, .video-section .section-wrapper .video-tabbar .tabbar-body .tab-bar .tablinks .video-thumb .watch-time, .video-section .section-wrapper .video-tabbar .tabbar-title .watch-time, .gallery-section .gallery-area .section-wrapper .gallery-item .gallery-thumb .gallery-icon, .gallery-section .gallery-area .section-wrapper .gallery-item .gallery-thumb::after, .news-letter .section-wrapper .news-form form label::after, .booking-table .shape-1, .booking-table .shape-2, .service-section .section-wrapper .service-item .service-inner .service-content::after, .about.home-4 .section-wrapper .about-thumb::after, .about::before, .testimonial .section-wrapper .carousel-indicators, .testimonial .section-wrapper .quete-thumb, .food-category .food-box .section-wrapper .food-slider-prev, .food-category .food-box .section-wrapper .food-slider-next, .banner.style-4 .banner-slider-2 .banner-pagination-2, .banner.style-3 .swiper-container.gallery-thumbs .banner-bitem .banner-binner::after, .banner.style-3 .swiper-container.gallery-top .banner-item .banner-inner .banner-thumb img, .banner.style-2 .left-side .section-wrapper .banner-pagination, .banner .banner-area .banner-content ul li:before, .banner .banner-area .banner-content form .codexcoder-selectoption::before, .banner .banner-area .banner-content form::after, .banner .shape-1, .banner .shape-2, .mobile-menu .menu .mobile-menu-area .mobile-menu-area-inner .mobile-search button, .mobile-menu .mobile-header .header-bar span, .page-header .page-title .breadcrumb li::after, .page-header .shape-1, .page-header .shape-2, .cart-option .cart-content .cart-scr .cart-con-item .cart-item .cart-inner .cart-top .remove-btn, .cart-option .count-item, .header-section.header-3 .header-top .menu-search-form .widget-search form button, .header-section.header-2::after, .header-section .main-menu ul li ul, .dd-icon-down:before, .dd-icon-down::after, .dd-icon-right:before, .dd-icon-right::after, .bg-shape-style, .food-btn::after, .meta-tag .categori::after, .single .section-wrapper .chef-item::after, .single .section-wrapper .related .tab-bar .tablinks::after, .video-thumb .video-icon, .service-item .service-inner .service-thumb::after, .service-item .service-inner .service-thumb span, .p-food-item .p-food-inner .p-food-thumb span, .p-food-item .p-food-inner .p-food-content .p-food-author, .p-food-item .p-food-inner .p-food-content .del-time li .time-tooltip, .p-food-group a::after, .chef-item .chef-inner .chef-content .chef-author, .product-item .product-thumb .price, .cart-plus-minus .qtybutton, .search-area .search-input .search-close, .search-area .search-input .search-close span, .search-area .search-input form {
+.footer .footer-bottom p a::after, .shop-product-wrap .product-item .product-thumb .product-action-link, .shop-product-wrap .product-list-item .product-thumb .product-action-link, .shop-product-wrap .product-item .product-thumb::after, .shop-product-wrap .product-list-item .product-thumb::after, .widget.widget-search .search-wrapper button, .recepi-single.recepi-single .section-wrapper .post-item .post-inner .post-content .make-product .left ul li.active::before, .recepi-single.recepi-single .section-wrapper .post-item .post-inner .post-content .make-product .left ul li.deactive::before, .recepi-single.recepi-single .section-wrapper .post-item .post-inner .post-content .make-product .right ul li.active::before, .recepi-single.recepi-single .section-wrapper .post-item .post-inner .post-content .make-product .right ul li.deactive::before, .blog-section.blog-single .section-wrapper .post-item .post-inner .post-content blockquote::before, .recepi-single.blog-single .section-wrapper .post-item .post-inner .post-content blockquote::before, .blog-section.blog-page .section-wrapper .post-item.qute-post .post-inner .post-thumb .qute-content, .recepi-single.blog-page .section-wrapper .post-item.qute-post .post-inner .post-thumb .qute-content, .blog-section.blog-page .section-wrapper .post-item.slider-post .post-inner .post-thumb.post-thumb-slider .post-thumb-slider-next, .blog-section.blog-page .section-wrapper .post-item.slider-post .post-inner .post-thumb.post-thumb-slider .post-thumb-slider-prev, .recepi-single.blog-page .section-wrapper .post-item.slider-post .post-inner .post-thumb.post-thumb-slider .post-thumb-slider-next, .recepi-single.blog-page .section-wrapper .post-item.slider-post .post-inner .post-thumb.post-thumb-slider .post-thumb-slider-prev, .blog-section.trending .section-wrapper .post-item .post-inner .post-thumb .post-content, .recepi-single.trending .section-wrapper .post-item .post-inner .post-thumb .post-content, .review .section-wrapper .related .tabcontent .p-food-item::after, .review .section-wrapper .related .tabcontent .product-item::after, .shop-page.single .section-wrapper .shop-single .shop-single-content .desc ul li::before, .coming-soon .coming-area .section-wrapper .countdown li h3::after, .video-section .section-wrapper .video-tabbar .tabbar-body .tab-bar .tablinks .video-thumb .watch-time, .video-section .section-wrapper .video-tabbar .tabbar-title .watch-time, .gallery-section .gallery-area .section-wrapper .gallery-item .gallery-thumb .gallery-icon, .gallery-section .gallery-area .section-wrapper .gallery-item .gallery-thumb::after, .news-letter .section-wrapper .news-form form label::after, .booking-table .shape-1, .booking-table .shape-2, .service-section .section-wrapper .service-item .service-inner .service-content::after, .about.home-4 .section-wrapper .about-thumb::after, .about::before, .testimonial .section-wrapper .carousel-indicators, .testimonial .section-wrapper .quete-thumb, .food-category .food-box .section-wrapper .food-slider-prev, .food-category .food-box .section-wrapper .food-slider-next, .banner.style-4 .banner-slider-2 .banner-pagination-2, .banner.style-3 .swiper-container.gallery-thumbs .banner-bitem .banner-binner::after, .banner.style-3 .swiper-container.gallery-top .banner-item .banner-inner .banner-thumb img, .banner.style-2 .left-side .section-wrapper .banner-pagination, .banner .banner-area .banner-content ul li:before, .banner .banner-area .banner-content form .codexcoder-selectoption::before, .banner .banner-area .banner-content form::after, .banner .shape-1, .banner .shape-2, .mobile-menu .menu .mobile-menu-area .mobile-menu-area-inner .mobile-search button, .mobile-menu .mobile-header .header-bar span, .page-header .page-title .breadcrumb li::after, .page-header .shape-1, .page-header .shape-2, .cart-option .cart-content .cart-scr .cart-con-item .cart-item .cart-inner .cart-top .remove-btn, .cart-option .count-item, .header-section.header-3 .header-top .menu-search-form .widget-search form button, .header-section.header-2::after, .header-section .main-menu ul li ul, .dd-icon-down:before, .dd-icon-down::after, .dd-icon-right:before, .dd-icon-right::after, .bg-shape-style, .food-btn::after, .meta-tag .categori::after, .outline-select .select-icon, .single .section-wrapper .chef-item::after, .single .section-wrapper .related .tab-bar .tablinks::after, .video-thumb .video-icon, .service-item .service-inner .service-thumb::after, .service-item .service-inner .service-thumb span, .p-food-item .p-food-inner .p-food-thumb span, .p-food-item .p-food-inner .p-food-content .p-food-author, .p-food-item .p-food-inner .p-food-content .del-time li .time-tooltip, .p-food-group a::after, .chef-item .chef-inner .chef-content .chef-author, .product-item .product-thumb .price, .cart-plus-minus .qtybutton, .search-area .search-input .search-close, .search-area .search-input .search-close span, .search-area .search-input form {
   position: absolute;
   content: "";
 }
 
-.shop-cart .section-wrapper .cart-bottom .cart-checkout-box .coupon, .shop-cart .section-wrapper .cart-bottom, .shop-product-wrap .product-item .product-thumb, .shop-product-wrap .product-list-item .product-thumb, .widget.recipe-categori, .widget .widget-header, .recepi-single.recepi-single .section-wrapper .comment-respond .add-comment .comment-form .food-btn, .blog-section.blog-single .section-wrapper .comments .comment-list .comment .com-content, .recepi-single.blog-single .section-wrapper .comments .comment-list .comment .com-content, .blog-section.blog-single .section-wrapper .product, .recepi-single.blog-single .section-wrapper .product, .blog-section .section-wrapper .post-item .post-inner .post-thumb, .recepi-single .section-wrapper .post-item .post-inner .post-thumb, .blog-section .section-wrapper .post-item .post-inner, .recepi-single .section-wrapper .post-item .post-inner, .contact-information .section-wrapper, .restaurant-section .section-wrapper .top-restaurant .restaurant-item .restaurant-inner .restaurant-thumb, .shop-page.single .section-wrapper .shop-single .gallery-thumbs .shop-item .shop-thumb, .video-section .section-wrapper .video-tabcontent, .video-section .section-wrapper, .news-letter .section-wrapper .news-form form, .sponsor-section .section-wrapper .sponsor-slider, .booking-table, .service-section .section-wrapper .service-item .service-inner .service-thumb, .testimonial.home-4 .section-wrapper .testi-wrapper .testi-slider .testi-top .testi-item, .contact-us, .food-category .food-box .section-wrapper .food-slider, .banner.style-4 .banner-slider-2, .banner.style-3 .swiper-container.gallery-top .banner-item .banner-inner .banner-thumb, .banner.style-3 .swiper-container, .banner.style-2 .left-side .section-wrapper .banner-slider, .banner.style-2, .banner, .page-header, .author-account .author-icon, .food-btn, .single, .single .section-wrapper .chef-item .chef-inner .chef-thumb, .p-food-item .p-food-inner, .p-food-item .p-food-inner .p-food-thumb, .chef-item .chef-inner, .chef-item .chef-inner .chef-content .chef-author, .cart-plus-minus, .recipe-item, .recipe-item .recipe-thumb {
+.shop-cart .section-wrapper .cart-bottom .cart-checkout-box .coupon, .shop-cart .section-wrapper .cart-bottom, .shop-product-wrap .product-item .product-thumb, .shop-product-wrap .product-list-item .product-thumb, .widget.recipe-categori, .widget .widget-header, .recepi-single.recepi-single .section-wrapper .comment-respond .add-comment .comment-form .food-btn, .blog-section.blog-single .section-wrapper .comments .comment-list .comment .com-content, .recepi-single.blog-single .section-wrapper .comments .comment-list .comment .com-content, .blog-section.blog-single .section-wrapper .product, .recepi-single.blog-single .section-wrapper .product, .blog-section .section-wrapper .post-item .post-inner .post-thumb, .recepi-single .section-wrapper .post-item .post-inner .post-thumb, .blog-section .section-wrapper .post-item .post-inner, .recepi-single .section-wrapper .post-item .post-inner, .contact-information .section-wrapper, .restaurant-section .section-wrapper .top-restaurant .restaurant-item .restaurant-inner .restaurant-thumb, .shop-page.single .section-wrapper .shop-single .gallery-thumbs .shop-item .shop-thumb, .video-section .section-wrapper .video-tabcontent, .video-section .section-wrapper, .news-letter .section-wrapper .news-form form, .sponsor-section .section-wrapper .sponsor-slider, .booking-table, .service-section .section-wrapper .service-item .service-inner .service-thumb, .testimonial.home-4 .section-wrapper .testi-wrapper .testi-slider .testi-top .testi-item, .contact-us, .sign-up, .sign-in, .food-category .food-box .section-wrapper .food-slider, .banner.style-4 .banner-slider-2, .banner.style-3 .swiper-container.gallery-top .banner-item .banner-inner .banner-thumb, .banner.style-3 .swiper-container, .banner.style-2 .left-side .section-wrapper .banner-slider, .banner.style-2, .banner, .page-header, .author-account .author-icon, .food-btn, .single, .single .section-wrapper .chef-item .chef-inner .chef-thumb, .p-food-item .p-food-inner, .p-food-item .p-food-inner .p-food-thumb, .chef-item .chef-inner, .chef-item .chef-inner .chef-content .chef-author, .cart-plus-minus, .recipe-item, .recipe-item .recipe-thumb {
   overflow: hidden;
 }
 
-.shop-cart .section-wrapper .cart-bottom .shiping-box .calculate-shiping button, .shop-cart .section-wrapper .cart-bottom .cart-checkout-box .cart-checkout input[type=submit], .shop-cart .section-wrapper .cart-bottom .cart-checkout-box .coupon input[type=submit], .recepi-single.recepi-single .section-wrapper .comment-respond .add-comment .comment-form .food-btn, .blog-section.blog-single .section-wrapper .comment-respond .add-comment .comment-form .food-btn, .contact-information .section-wrapper form .food-btn, .review .section-wrapper .related .tabcontent .review .client-review .review-form form .food-btn, .booking-table .section-wrapper form .food-btn, .food-apps .apps-content .section-header .field-holder .field-label-btn, .mobile-menu .mobile-header .header-bar, .header-section.header-2 .header-area .author-option .author-area .search-start, .contact-from form input[type=submit], .contact-from form select[type=submit], .contact-from form textarea[type=submit], .p-food-item .p-food-inner .p-food-content .del-time li {
+.shop-cart .section-wrapper .cart-bottom .shiping-box .calculate-shiping button, .shop-cart .section-wrapper .cart-bottom .cart-checkout-box .cart-checkout input[type=submit], .shop-cart .section-wrapper .cart-bottom .cart-checkout-box .coupon input[type=submit], .recepi-single.recepi-single .section-wrapper .comment-respond .add-comment .comment-form .food-btn, .blog-section.blog-single .section-wrapper .comment-respond .add-comment .comment-form .food-btn, .contact-information .section-wrapper form .food-btn, .review .section-wrapper .related .tabcontent .review .client-review .review-form form .food-btn, .booking-table .section-wrapper form .food-btn, .food-apps .apps-content .section-header .field-holder .field-label-btn, .mobile-menu .mobile-header .header-bar, .header-section.header-2 .header-area .author-option .author-area .search-start, .contact-from form input[type=submit], .contact-from form textarea[type=submit], .signUp-form form input[type=submit], .signUp-form form textarea[type=submit], .signIn-form form input[type=submit], .signIn-form form textarea[type=submit], .p-food-item .p-food-inner .p-food-content .del-time li {
   cursor: pointer;
 }
 
@@ -2088,7 +2120,7 @@ aside {
   text-align: center;
 }
 .header-section .main-menu {
-  width: calc(100% - 300px);
+  width: calc(100% - 650px);
 }
 @media (min-width: 1400px) {
   .header-section .main-menu {
@@ -2183,7 +2215,6 @@ aside {
 }
 .header-section .author-option {
   width: 500px;
-  display: none;
 }
 @media (min-width: 1400px) {
   .header-section .author-option {
@@ -2195,6 +2226,34 @@ aside {
   flex-wrap: wrap;
   align-items: center;
   justify-content: space-between;
+}
+.header-section .author-option .author-area select {
+  background-color: #fff;
+}
+.header-section .author-option .signing-area {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+}
+.header-section .author-option .signing-area select {
+  background-color: #fff;
+}
+.header-section .author-option .signing-area .signUp, .header-section .author-option .signing-area .signIn {
+  width: 110px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-left: 1px solid #e6e6e6;
+  text-align: center;
+  color: #362725;
+  font-weight: 600;
+}
+.header-section .author-option .signing-area .signUp i, .header-section .author-option .signing-area .signIn i {
+  color: #fb524f;
+}
+.header-section .author-option .signing-area .signUp > ul, .header-section .author-option .signing-area .signIn > ul {
+  padding: 0 !important;
 }
 .header-section.header-2::after {
   width: 30%;
@@ -2589,6 +2648,13 @@ aside {
   display: block;
   background: #fb524f;
 }
+@media screen and (max-width: 1199px) {
+  .cart-option {
+    margin: Auto;
+    border-left: none;
+    border-right: none;
+  }
+}
 
 .author-account {
   width: calc(100% - 215px);
@@ -2613,6 +2679,13 @@ aside {
 .author-account .author-select select {
   border: none;
   font-weight: 500;
+}
+@media screen and (max-width: 1199px) {
+  .author-account {
+    margin: Auto;
+    border-left: none;
+    border-right: none;
+  }
 }
 
 .page-header {
@@ -2725,7 +2798,7 @@ aside {
     padding-right: 35px;
   }
 }
-@media (max-width: 1399px) and (min-width: 1280px) {
+@media (max-width: 1399px) and (min-width: 1200px) {
   .header-section .logo {
     width: 200px;
     text-align: left;
@@ -2923,6 +2996,11 @@ aside {
   font-size: 18px;
   text-align: center;
 }
+@media screen and (max-width: 1199px) {
+  .mobile-menu .menu .mobile-menu-area .signUp ul, .mobile-menu .menu .mobile-menu-area .signIn ul {
+    padding: 0 !important;
+  }
+}
 
 .mobile-menu li .dd-icon-down:before {
   -webkit-transform: translateX(-15px) translateY(-50%) rotate(0deg);
@@ -2940,6 +3018,36 @@ aside {
   width: 200px;
 }
 
+@media screen and (max-width: 1199px) {
+  .city-lang, .cart-option, .author-account {
+    margin: Auto;
+    border-left: none;
+    border-right: none;
+    height: 60px;
+  }
+  .city-lang select, .cart-option select, .author-account select {
+    background-color: #fff;
+  }
+
+  .cart-option > .cart-content {
+    right: -120px;
+    min-width: 300px;
+    min-width: 300px;
+  }
+  .cart-option > .cart-content .remove-btn a {
+    width: 25px;
+    height: 25px;
+    line-height: 2px;
+  }
+  .cart-option > .cart-content .remove-btn a [class^=icofont-] {
+    line-height: 0;
+  }
+
+  .author-account {
+    width: 160px;
+    padding-left: 0;
+  }
+}
 /* @@@@@@@@@@@@@  Banner Section Start Here  @@@@@@@@@@@@@@ */
 .banner {
   background: #fafeff;
@@ -3678,29 +3786,29 @@ aside {
 }
 
 /* @@@@@@@@@@@@@  Contact Us Section Start Here  @@@@@@@@@@@@@@ */
-.contact-us {
+.contact-us, .sign-up, .sign-in {
   padding: 40px 0;
   background: #fb524f;
 }
-.contact-us .contact-from {
+.contact-us .contact-from, .contact-us .signUp-form, .contact-us .signIn-form, .sign-up .contact-from, .sign-up .signUp-form, .sign-up .signIn-form, .sign-in .contact-from, .sign-in .signUp-form, .sign-in .signIn-form {
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
   border-radius: 10px;
 }
-.contact-us .contact-from h5 {
+.contact-us .contact-from h5, .contact-us .signUp-form h5, .contact-us .signIn-form h5, .sign-up .contact-from h5, .sign-up .signUp-form h5, .sign-up .signIn-form h5, .sign-in .contact-from h5, .sign-in .signUp-form h5, .sign-in .signIn-form h5 {
   padding: 20px 25px;
   color: #fb524f;
   margin-bottom: 0;
 }
-.contact-us .contact-from form {
+.contact-us .contact-from form, .contact-us .signUp-form form, .contact-us .signIn-form form, .sign-up .contact-from form, .sign-up .signUp-form form, .sign-up .signIn-form form, .sign-in .contact-from form, .sign-in .signUp-form form, .sign-in .signIn-form form {
   border-top: 1px solid #e6e6e6;
 }
 @media (max-width: 767px) {
-  .contact-us .contact-from form {
+  .contact-us .contact-from form, .contact-us .signUp-form form, .contact-us .signIn-form form, .sign-up .contact-from form, .sign-up .signUp-form form, .sign-up .signIn-form form, .sign-in .contact-from form, .sign-in .signUp-form form, .sign-in .signIn-form form {
     padding: 30px 20px;
   }
 }
-.contact-us .contact-from form input, .contact-us .contact-from form select, .contact-us .contact-from form textarea {
+.contact-us .contact-from form input, .contact-us .contact-from form textarea, .contact-us .signUp-form form input, .contact-us .signUp-form form textarea, .contact-us .signIn-form form input, .contact-us .signIn-form form textarea, .sign-up .contact-from form input, .sign-up .contact-from form textarea, .sign-up .signUp-form form input, .sign-up .signUp-form form textarea, .sign-up .signIn-form form input, .sign-up .signIn-form form textarea, .sign-in .contact-from form input, .sign-in .contact-from form textarea, .sign-in .signUp-form form input, .sign-in .signUp-form form textarea, .sign-in .signIn-form form input, .sign-in .signIn-form form textarea {
   background: #fff;
   box-shadow: 0 0 10px rgba(129, 72, 17, 0.1);
   -webkit-border-radius: 10px;
@@ -3709,52 +3817,69 @@ aside {
   margin-bottom: 10px;
   color: #888;
 }
-.contact-us .contact-from form input[type=submit], .contact-us .contact-from form select[type=submit], .contact-us .contact-from form textarea[type=submit] {
+.contact-us .contact-from form input[type=submit], .contact-us .contact-from form textarea[type=submit], .contact-us .signUp-form form input[type=submit], .contact-us .signUp-form form textarea[type=submit], .contact-us .signIn-form form input[type=submit], .contact-us .signIn-form form textarea[type=submit], .sign-up .contact-from form input[type=submit], .sign-up .contact-from form textarea[type=submit], .sign-up .signUp-form form input[type=submit], .sign-up .signUp-form form textarea[type=submit], .sign-up .signIn-form form input[type=submit], .sign-up .signIn-form form textarea[type=submit], .sign-in .contact-from form input[type=submit], .sign-in .contact-from form textarea[type=submit], .sign-in .signUp-form form input[type=submit], .sign-in .signUp-form form textarea[type=submit], .sign-in .signIn-form form input[type=submit], .sign-in .signIn-form form textarea[type=submit] {
   max-width: 200px;
   color: #fff;
   background: #fb524f;
   box-shadow: none;
   margin: 0;
 }
-.contact-us .contact-from form p {
+.contact-us .contact-from form p, .contact-us .signUp-form form p, .contact-us .signIn-form form p, .sign-up .contact-from form p, .sign-up .signUp-form form p, .sign-up .signIn-form form p, .sign-in .contact-from form p, .sign-in .signUp-form form p, .sign-in .signIn-form form p {
   margin-top: 0.25rem;
 }
-.contact-us .contact-from form p small {
+.contact-us .contact-from form p small, .contact-us .signUp-form form p small, .contact-us .signIn-form form p small, .sign-up .contact-from form p small, .sign-up .signUp-form form p small, .sign-up .signIn-form form p small, .sign-in .contact-from form p small, .sign-in .signUp-form form p small, .sign-in .signIn-form form p small {
   font-size: 11px;
   font-style: italic;
 }
-.contact-us .contact-from form p small a {
+.contact-us .contact-from form p small a, .contact-us .signUp-form form p small a, .contact-us .signIn-form form p small a, .sign-up .contact-from form p small a, .sign-up .signUp-form form p small a, .sign-up .signIn-form form p small a, .sign-in .contact-from form p small a, .sign-in .signUp-form form p small a, .sign-in .signIn-form form p small a {
   color: #fb524f;
 }
+.contact-us .contact-from form .outline-select, .contact-us .signUp-form form .outline-select, .contact-us .signIn-form form .outline-select, .sign-up .contact-from form .outline-select, .sign-up .signUp-form form .outline-select, .sign-up .signIn-form form .outline-select, .sign-in .contact-from form .outline-select, .sign-in .signUp-form form .outline-select, .sign-in .signIn-form form .outline-select {
+  margin-bottom: 0;
+}
+.contact-us .contact-from form .outline-select select, .contact-us .signUp-form form .outline-select select, .contact-us .signIn-form form .outline-select select, .sign-up .contact-from form .outline-select select, .sign-up .signUp-form form .outline-select select, .sign-up .signIn-form form .outline-select select, .sign-in .contact-from form .outline-select select, .sign-in .signUp-form form .outline-select select, .sign-in .signIn-form form .outline-select select {
+  box-shadow: 0 0 10px rgba(129, 72, 17, 0.1);
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  margin-bottom: 10px;
+  color: #888;
+  padding: 5px 20px;
+  border: none;
+}
+.contact-us .contact-from form .outline-select .select-icon, .contact-us .signUp-form form .outline-select .select-icon, .contact-us .signIn-form form .outline-select .select-icon, .sign-up .contact-from form .outline-select .select-icon, .sign-up .signUp-form form .outline-select .select-icon, .sign-up .signIn-form form .outline-select .select-icon, .sign-in .contact-from form .outline-select .select-icon, .sign-in .signUp-form form .outline-select .select-icon, .sign-in .signIn-form form .outline-select .select-icon {
+  padding: 5px 10px;
+  border-radius: 0 10px 10px 0;
+}
 @media (max-width: 991px) {
-  .contact-us .contact-home-chef {
+  .contact-us .contact-home-chef, .sign-up .contact-home-chef, .sign-in .contact-home-chef {
     padding-top: 40px;
   }
 }
-.contact-us .contact-home-chef .section-header {
+.contact-us .contact-home-chef .section-header, .sign-up .contact-home-chef .section-header, .sign-in .contact-home-chef .section-header {
   text-align: center;
   margin-bottom: 40px;
 }
 @media (min-width: 768px) {
-  .contact-us .contact-home-chef .section-header {
+  .contact-us .contact-home-chef .section-header, .sign-up .contact-home-chef .section-header, .sign-in .contact-home-chef .section-header {
     text-align: left;
   }
 }
-.contact-us .contact-home-chef .section-header p {
+.contact-us .contact-home-chef .section-header p, .sign-up .contact-home-chef .section-header p, .sign-in .contact-home-chef .section-header p {
   margin-left: 0;
 }
-.contact-us .contact-home-chef .section-header h3, .contact-us .contact-home-chef .section-header p {
+.contact-us .contact-home-chef .section-header h3, .contact-us .contact-home-chef .section-header p, .sign-up .contact-home-chef .section-header h3, .sign-up .contact-home-chef .section-header p, .sign-in .contact-home-chef .section-header h3, .sign-in .contact-home-chef .section-header p {
   color: #fff;
 }
-.contact-us .contact-home-chef .section-wrapper .contact-count-item {
+.contact-us .contact-home-chef .section-wrapper .contact-count-item, .sign-up .contact-home-chef .section-wrapper .contact-count-item, .sign-in .contact-home-chef .section-wrapper .contact-count-item {
   width: calc(100% / 1);
 }
 @media (min-width: 576px) {
-  .contact-us .contact-home-chef .section-wrapper .contact-count-item {
+  .contact-us .contact-home-chef .section-wrapper .contact-count-item, .sign-up .contact-home-chef .section-wrapper .contact-count-item, .sign-in .contact-home-chef .section-wrapper .contact-count-item {
     width: calc(100% / 3);
   }
 }
-.contact-us .contact-home-chef .section-wrapper .contact-count-item .contact-count-inner {
+.contact-us .contact-home-chef .section-wrapper .contact-count-item .contact-count-inner, .sign-up .contact-home-chef .section-wrapper .contact-count-item .contact-count-inner, .sign-in .contact-home-chef .section-wrapper .contact-count-item .contact-count-inner {
   background: #fff;
   text-align: center;
   margin: 5px;
@@ -3764,30 +3889,58 @@ aside {
   border-radius: 4px;
 }
 @media (min-width: 576px) {
-  .contact-us .contact-home-chef .section-wrapper .contact-count-item .contact-count-inner {
+  .contact-us .contact-home-chef .section-wrapper .contact-count-item .contact-count-inner, .sign-up .contact-home-chef .section-wrapper .contact-count-item .contact-count-inner, .sign-in .contact-home-chef .section-wrapper .contact-count-item .contact-count-inner {
     margin-bottom: 0;
   }
 }
-.contact-us .contact-home-chef .section-wrapper .contact-count-item .contact-count-inner .contact-count-thumb {
+.contact-us .contact-home-chef .section-wrapper .contact-count-item .contact-count-inner .contact-count-thumb, .sign-up .contact-home-chef .section-wrapper .contact-count-item .contact-count-inner .contact-count-thumb, .sign-in .contact-home-chef .section-wrapper .contact-count-item .contact-count-inner .contact-count-thumb {
   width: 100%;
   height: 55px;
   margin-bottom: 15px;
 }
-.contact-us .contact-home-chef .section-wrapper .contact-count-item .contact-count-inner .contact-count-thumb i {
+.contact-us .contact-home-chef .section-wrapper .contact-count-item .contact-count-inner .contact-count-thumb i, .sign-up .contact-home-chef .section-wrapper .contact-count-item .contact-count-inner .contact-count-thumb i, .sign-in .contact-home-chef .section-wrapper .contact-count-item .contact-count-inner .contact-count-thumb i {
   color: #fb524f;
   font-size: 60px;
   vertical-align: middle;
 }
-.contact-us .contact-home-chef .section-wrapper .contact-count-item .contact-count-inner .contact-count-content h5 {
+.contact-us .contact-home-chef .section-wrapper .contact-count-item .contact-count-inner .contact-count-content h5, .sign-up .contact-home-chef .section-wrapper .contact-count-item .contact-count-inner .contact-count-content h5, .sign-in .contact-home-chef .section-wrapper .contact-count-item .contact-count-inner .contact-count-content h5 {
   margin-bottom: 5px;
 }
-.contact-us .contact-home-chef .section-wrapper .contact-count-item .contact-count-inner .contact-count-content p {
+.contact-us .contact-home-chef .section-wrapper .contact-count-item .contact-count-inner .contact-count-content p, .sign-up .contact-home-chef .section-wrapper .contact-count-item .contact-count-inner .contact-count-content p, .sign-in .contact-home-chef .section-wrapper .contact-count-item .contact-count-inner .contact-count-content p {
   margin-bottom: 0;
 }
 @media (min-width: 1200px) {
-  .contact-us .contact-thumb img {
+  .contact-us .contact-thumb img, .sign-up .contact-thumb img, .sign-in .contact-thumb img {
     position: absolute;
     top: -80px;
+  }
+}
+
+.sign-up, .sign-in {
+  background: transparent;
+  padding-bottom: 0;
+}
+.sign-up input[type=checkbox], .sign-in input[type=checkbox] {
+  width: auto !important;
+  background: transparent;
+  margin-top: 0.5rem;
+}
+.sign-up label, .sign-in label {
+  margin-bottom: 0;
+}
+.sign-up input[type=submit], .sign-in input[type=submit] {
+  margin-top: 1.5rem;
+}
+.sign-up p, .sign-in p {
+  margin-top: 1rem !important;
+  margin-bottom: 1.5rem !important;
+}
+.sign-up p a, .sign-in p a {
+  color: #fb524f;
+}
+@media screen and (max-width: 1199px) {
+  .sign-up ul, .sign-in ul {
+    padding: 0;
   }
 }
 
@@ -6908,37 +7061,6 @@ p.comment-form-cookies-consent input {
 }
 .shop-cart .section-wrapper .cart-bottom .shiping-box .calculate-shiping h4 {
   margin-bottom: 30px;
-}
-.shop-cart .section-wrapper .cart-bottom .shiping-box .calculate-shiping .outline-select {
-  background: #fff;
-  margin-bottom: 20px;
-}
-.shop-cart .section-wrapper .cart-bottom .shiping-box .calculate-shiping .outline-select select {
-  width: 100%;
-  padding: 9px 20px;
-  background: transparent;
-  z-index: 1;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  border: 1px solid #e6e6e6;
-}
-.shop-cart .section-wrapper .cart-bottom .shiping-box .calculate-shiping .outline-select.shipping-select {
-  width: 100%;
-}
-@media (min-width: 992px) {
-  .shop-cart .section-wrapper .cart-bottom .shiping-box .calculate-shiping .outline-select.shipping-select {
-    width: 50%;
-    float: left;
-  }
-}
-.shop-cart .section-wrapper .cart-bottom .shiping-box .calculate-shiping .outline-select .select-icon {
-  top: 0;
-  right: 0;
-  padding: 9px 20px;
-  background: #fb524f;
-  color: #fff;
-  border: 1px solid #e6e6e6;
-  border-radius: 0px 3px 3px 0px;
 }
 .shop-cart .section-wrapper .cart-bottom .shiping-box .calculate-shiping .cart-page-input-text {
   width: 45%;

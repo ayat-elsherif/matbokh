@@ -48,6 +48,13 @@
         }
     });
 
+    // switching flags
+    $('.city-dialect').on('change',function(){
+        let imgSrc="assets/images/header/0"+ $(this).val() + ".png";
+        $('.city-dialect').not(this).val(this.value).prev().attr('src',imgSrc);
+        $('.city-dialect').prev().val(this.value).attr('src',imgSrc);
+        // console.log("assets/images/header/0"+ $(this).val() + ".png");
+    });
 
     // scroll up start here
     $(function(){
@@ -259,4 +266,7 @@
         },
         loop: true
     });
+
+
+
 }(jQuery));
