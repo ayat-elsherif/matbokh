@@ -85,6 +85,20 @@
         });
     });
 
+    // navbar cart closing
+    $('.cart-option img').on('click',function(e){
+        e.stopPropagation();
+        $(this).parent().toggleClass('open');
+    });
+    $('.list-close').on('click',function(e){
+        e.stopPropagation();
+        $('.cart-option').removeClass('open');
+    });
+    // $('.remove-btn').on('click',function(e){
+    //     e.stopPropagation();
+    //     $(this).parents('.cart-item').remove();
+    // });
+
     // search & cart option
     $(document).on('click','.search-start, .search-close',function(){
         $(".search-area").toggleClass("open");

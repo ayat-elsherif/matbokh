@@ -19,12 +19,13 @@
 		<!-- swiper css -->
 		<link rel="stylesheet" href="assets/css/swiper.min.css">
 		<!-- custom scss -->
-		<link rel="stylesheet" href="assets/css/style.css">
+		<link rel="stylesheet" href="assets/css/style-rtl.css">
 
 		<title>Matbokh - Food & Resturant</title>
 	</head>
 
-	<body dir="ltr">
+	<!------switch between ltr - rtl ------>
+	<body>
 
 		<!-------------------signup/signin modals--------------------->
 
@@ -38,7 +39,7 @@
 					  </button>
 					  <div class="sign-up">
 						<div class="signUp-form">
-							<h5>Register Now</h5>
+							<h5 class="text-center">Register Now</h5>
 							<form action="/">
 								<input type="text" name="name" placeholder="Full Name*" required>
 								<input type="text" name="number" placeholder="Phone Number*" required>
@@ -59,9 +60,11 @@
 	
 							</div>
 								<textarea row='3' type="text" name="number" placeholder="About yourself (ex: I love cooking..)"></textarea>
-								<input type="submit" value="Sign Up">
+								<div class="text-left">
+									<input type="submit" value="Sign Up">
 								<p><small>By clicking Sign Up, you agree to our <a href="#">Terms & Conditions</a>
 								</small></p>
+								</div>
 							</form>
 						</div>
 					  </div>
@@ -84,16 +87,19 @@
 
 					  <div class="sign-in">
 						<div class="signIn-form">
-							<h5>Sign In Now</h5>
+							<h5 class="text-center">Sign In Now</h5>
 							<form action="/">
 								<input type="text" name="name" placeholder="Full Name or Email*" required>
 								<input type="password" name="password" placeholder="Password*" required>
-								<div class="checkbox-inline">
-									<label><input type="checkbox"> Remember me</label>
-								</div>
-								<p><a href="#">I forget my password</a></p>
-								<input type="submit" value="Sign Up">
+								<div class="text-left">
+									<div class="checkbox-inline">
+										<label><input type="checkbox"> Remember me</label>
+									</div>
 								
+									<p><a href="#">I forget my password</a></p>
+								<input type="submit" value="Sign In">
+								
+								</div>
 							</form>
 						</div>
 					  </div>
@@ -162,10 +168,7 @@
 									</select>
 								</div>
 							</li>
-
-						
-							<!-------------------------logged in ( cart and profile) small screens------------------------->
-							<!-- <li class="border-bottom">
+							<li class="border-bottom">
 								<div class="cart-option">
 									<img src="assets/images/header/cart.png" alt="shop-cart">
 									<div class="count-item">04</div>
@@ -294,6 +297,10 @@
 									</div>
 								</div>
 							</li>
+
+						
+							<!-------------------------logged in ( cart and profile) small screens------------------------->
+							<!-- 
 							<li class="border-bottom">
 								<div class="author-account">
 									<div class="author-icon">
@@ -353,19 +360,7 @@
 									<option value="3">AR_UAE</option>
 								</select>
 							</div>
-
-							<div class="signUp">
-								<ul>
-									<li data-toggle="modal" data-target="#signup"><a><i class="icofont-plus"></i> Sign Up</a></li>
-								</ul>
-							</div>
-							<div class="signIn">
-								<ul>
-									<li data-toggle="modal" data-target="#signin"> <a> <i class="icofont-login"></i> Sign In</a></li>
-								</ul>
-							</div>
-							<!-----------------------------------logged in (cart and profile) large-screen------------------------------------->
-							<!-- <div class="cart-option">
+							<div class="cart-option">
 								<img src="assets/images/header/cart.png" alt="shop-cart">
 								<div class="count-item">04</div>
 								<div class="cart-content">
@@ -492,6 +487,19 @@
 									</div>
 								</div>
 							</div>
+							<div class="signUp">
+								<ul>
+									<li data-toggle="modal" data-target="#signup"><a><i class="icofont-plus"></i> Sign Up</a></li>
+								</ul>
+							</div>
+							<div class="signIn">
+								<ul>
+									<li data-toggle="modal" data-target="#signin"> <a> <i class="icofont-login"></i> Sign In</a></li>
+								</ul>
+							</div>
+							<!-----------------------------------logged in (cart and profile) large-screen------------------------------------->
+							<!-- 
+							
 							<div class="author-account">
 								<div class="author-icon">
 									<img src="assets/images/chef/author/08.jpg" alt="author">
@@ -1606,7 +1614,7 @@
 				<div class="row justify-content-center align-items-center">
 					<div class="col-xl-4 col-lg-6 col-12">
 						<div class="contact-from">
-							<h5>Register Now</h5>
+							<h5 class="text-center">Register Now</h5>
 							<form action="/">
 								<input type="text" name="name" placeholder="Full Name*" required>
 								<input type="text" name="number" placeholder="Phone Number*" required>
@@ -1627,9 +1635,11 @@
 
 							</div>
 								<textarea row='3' type="text" name="number" placeholder="About yourself (ex: I love cooking..)"></textarea>
-								<input type="submit" value="Sign Up">
-								<p><small>By clicking Sign Up, you agree to our <a href="#">Terms & Conditions</a>
-								</small></p>
+								<div class="text-left">
+									<input type="submit" value="Sign Up">
+									<p><small>By clicking Sign Up, you agree to our <a href="#">Terms & Conditions</a>
+									</small></p>
+								</div>
 							</form>
 						</div>
 					</div>
