@@ -1,0 +1,807 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+
+	<!-- favicon -->
+	<link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
+	<!-- animate scss -->
+	<link rel="stylesheet" href="assets/css/animate.css">
+	<!-- bootstarp css -->
+	<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+	<!-- icofont -->
+	<link rel="stylesheet" href="assets/css/icofont.min.css">
+	<!-- lightcase css -->
+	<link rel="stylesheet" href="assets/css/lightcase.css">
+	<!-- swiper css -->
+	<link rel="stylesheet" href="assets/css/swiper.min.css">
+	<!-- custom scss -->
+	<link rel="stylesheet" href="assets/css/style-ltr.css">
+
+	<title>Matbokh - Food & Resturant</title>
+</head>
+
+<!------switch between ltr - rtl ------>
+
+<body>
+
+	<!-------------------signup/signin modals--------------------->
+
+	<div class="modal fade" id="signup" tabindex="-1" role="dialog" aria-labelledby="signupLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+
+				<div class="modal-body">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true"><i class="icofont-close-line"></i></span>
+					</button>
+					<div class="sign-up">
+						<div class="signUp-form">
+							<h5 class="text-center">Register Now</h5>
+							<form action="/">
+								<input type="text" name="name" placeholder="Full Name*" required>
+								<input type="text" name="number" placeholder="Phone Number*" required>
+								<input type="email" name="email" placeholder="Your Email">
+								<input type="password" name="password" placeholder="Password*" required>
+								<div class="outline-select">
+									<select name="emirate">
+										<option>Choose emirate</option>
+										<option>emirate</option>
+									</select>
+									<span class="select-icon"><i class="icofont-caret-down"></i></span>
+								</div>
+								<div class="outline-select">
+									<select name="area">
+										<option>Choose area</option>
+									</select>
+									<span class="select-icon"><i class="icofont-caret-down"></i></span>
+
+								</div>
+								<textarea row='3' type="text" name="number"
+									placeholder="About yourself (ex: I love cooking..)"></textarea>
+								<div class="text-left">
+									<input type="submit" value="Sign Up">
+									<p><small>By clicking Sign Up, you agree to our <a href="#">Terms & Conditions</a>
+										</small></p>
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div class="modal fade" id="signin" tabindex="-1" role="dialog" aria-labelledby="signinLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+
+				<div class="modal-body">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true"><i class="icofont-close-line"></i></span>
+					</button>
+
+					<div class="sign-in">
+						<div class="signIn-form">
+							<h5 class="text-center">Sign In Now</h5>
+							<form action="/">
+								<input type="text" name="name" placeholder="Full Name or Email*" required>
+								<input type="password" name="password" placeholder="Password*" required>
+								<div class="text-left">
+									<div class="checkbox-inline">
+										<label><input type="checkbox"> Remember me</label>
+									</div>
+
+									<p><a href="#">I forget my password</a></p>
+									<input type="submit" value="Sign In">
+
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<!-------------------signup/signin modals--------------------->
+
+
+	<!-- preloader -->
+	<div class="preloader">
+		<div class="load loade">
+			<hr />
+			<hr />
+			<hr />
+			<hr />
+		</div>
+	</div>
+	<!-- preloader -->
+
+	<!-- Mobile Menu Start Here -->
+	<div class="mobile-menu">
+		<nav class="mobile-header d-xl-none">
+			<div class="header-logo">
+				<a href="index.html" class="logo"><img src="assets/images/logo/01.png" alt="logo"></a>
+			</div>
+			<div class="header-bar">
+				<span></span>
+				<span></span>
+				<span></span>
+			</div>
+		</nav>
+		<nav class="menu">
+			<div class="mobile-menu-area d-xl-none">
+				<div class="mobile-menu-area-inner scrollbar">
+					<div class="mobile-search">
+						<input type="text" placeholder="Search Here.........">
+						<button type="submit"><i class="icofont-search-2"></i></button>
+					</div>
+					<ul>
+						<li>
+							<a href="#">Home</a>
+						</li>
+						<li><a href="about.html">About</a></li>
+						<li><a href="chefs.htm">Chefs</a></li>
+						<li>
+							<a href="find.htm">Find</a>
+						</li>
+						<li>
+							<a href="Contact.htm">Contact</a>
+						</li>
+
+						<div class="signUp border-bottom">
+							<ul>
+								<li data-toggle="modal" data-target="#signup"> <a> Sign Up</a></li>
+							</ul>
+						</div>
+						<div class="signIn border-bottom">
+							<ul>
+								<li data-toggle="modal" data-target="#signin"> <a> Sign In</a></li>
+							</ul>
+						</div>
+
+						<li class="border-bottom">
+							<div class="city-lang">
+								<img src="assets/images/header/01.png" alt="city-lang">
+								<select name="lang" id="lang" class="city-dialect">
+									<option value="1">ENG</option>
+									<option value="2">AR-EG</option>
+									<option value="3">AR-UAE</option>
+								</select>
+							</div>
+						</li>
+						<li class="border-bottom">
+							<div class="cart-option">
+								<img src="assets/images/header/cart.png" alt="shop-cart">
+								<div class="count-item">04</div>
+								<div class="cart-content">
+									<div class="cart-title">
+										<div class="add-item">4 Items Added</div>
+										<div class="list-close"><a href="#">Close</a></div>
+									</div>
+									<div class="cart-scr scrollbar">
+										<div class="cart-con-item">
+											<div class="cart-item">
+												<div class="cart-inner">
+													<div class="cart-top">
+														<div class="thumb">
+															<a href="#"><img src="assets/images/popular-food/01.jpg"
+																	alt=""></a>
+														</div>
+														<div class="content">
+															<a href="#">Split Remedy Split End Shampoo</a>
+														</div>
+														<div class="remove-btn">
+															<a href="#"><i class="icofont-close"></i></a>
+														</div>
+													</div>
+													<div class="cart-bottom">
+														<div class="sing-price">Tk. 140</div>
+														<div class="cart-plus-minus">
+															<div class="dec qtybutton">-</div>
+															<div class="dec qtybutton">-</div>
+															<input class="cart-plus-minus-box" type="text"
+																name="qtybutton" value="1">
+															<div class="inc qtybutton">+</div>
+															<div class="inc qtybutton">+</div>
+														</div>
+														<div class="total-price">Tk. 280.00</div>
+													</div>
+												</div>
+											</div>
+											<div class="cart-item">
+												<div class="cart-inner">
+													<div class="cart-top">
+														<div class="thumb">
+															<a href="#"><img src="assets/images/popular-food/02.jpg"
+																	alt=""></a>
+														</div>
+														<div class="content">
+															<a href="#">Split Remedy Split End Shampoo</a>
+														</div>
+														<div class="remove-btn">
+															<a href="#"><i class="icofont-close"></i></a>
+														</div>
+													</div>
+													<div class="cart-bottom">
+														<div class="sing-price">Tk. 140</div>
+														<div class="cart-plus-minus">
+															<div class="dec qtybutton">-</div>
+															<div class="dec qtybutton">-</div>
+															<input class="cart-plus-minus-box" type="text"
+																name="qtybutton" value="1">
+															<div class="inc qtybutton">+</div>
+															<div class="inc qtybutton">+</div>
+														</div>
+														<div class="total-price">Tk. 280.00</div>
+													</div>
+												</div>
+											</div>
+											<div class="cart-item">
+												<div class="cart-inner">
+													<div class="cart-top">
+														<div class="thumb">
+															<a href="#"><img src="assets/images/popular-food/03.jpg"
+																	alt=""></a>
+														</div>
+														<div class="content">
+															<a href="#">Split Remedy Split End Shampoo</a>
+														</div>
+														<div class="remove-btn">
+															<a href="#"><i class="icofont-close"></i></a>
+														</div>
+													</div>
+													<div class="cart-bottom">
+														<div class="sing-price">Tk. 140</div>
+														<div class="cart-plus-minus">
+															<div class="dec qtybutton">-</div>
+															<div class="dec qtybutton">-</div>
+															<input class="cart-plus-minus-box" type="text"
+																name="qtybutton" value="1">
+															<div class="inc qtybutton">+</div>
+															<div class="inc qtybutton">+</div>
+														</div>
+														<div class="total-price">Tk. 280.00</div>
+													</div>
+												</div>
+											</div>
+											<div class="cart-item">
+												<div class="cart-inner">
+													<div class="cart-top">
+														<div class="thumb">
+															<a href="#"><img src="assets/images/popular-food/04.jpg"
+																	alt=""></a>
+														</div>
+														<div class="content">
+															<a href="#">Split Remedy Split End Shampoo</a>
+														</div>
+														<div class="remove-btn">
+															<a href="#"><i class="icofont-close"></i></a>
+														</div>
+													</div>
+													<div class="cart-bottom">
+														<div class="sing-price">Tk. 140</div>
+														<div class="cart-plus-minus">
+															<div class="dec qtybutton">-</div>
+															<div class="dec qtybutton">-</div>
+															<input class="cart-plus-minus-box" type="text"
+																name="qtybutton" value="1">
+															<div class="inc qtybutton">+</div>
+															<div class="inc qtybutton">+</div>
+														</div>
+														<div class="total-price">Tk. 280.00</div>
+													</div>
+												</div>
+											</div>
+										</div>
+									</div>
+									<div class="cart-scr-bottom">
+										<ul>
+											<li>
+												<div class="title">Subtotal</div>
+												<div class="price">Tk. 1045.00</div>
+											</li>
+											<li>
+												<div class="title">Shipping</div>
+												<div class="price">Tk. 40.00</div>
+											</li>
+											<li>
+												<div class="title">Cart Total</div>
+												<div class="price">Tk. 1085.00</div>
+											</li>
+										</ul>
+										<a href="#" class="food-btn"><span>Place Order</span></a>
+									</div>
+								</div>
+							</div>
+						</li>
+
+
+						<!-------------------------logged in ( cart and profile) small screens------------------------->
+						<!-- 
+							<li class="border-bottom">
+								<div class="author-account">
+									<div class="author-icon">
+										<img src="assets/images/chef/author/08.jpg" alt="author">
+									</div>
+									<div class="author-select">
+										<select name="author-select" id="author-select">
+											<option value="1">My Account </option>
+											<option value="2">Log Out </option>
+										</select>
+									</div>
+								</div>
+							</li> -->
+						<!-------------------------logged in ( cart and profile)------------------------->
+					</ul>
+					<div class="scocial-media">
+						<a href="#" class="facebook"><i class="icofont-facebook"></i></a>
+						<a href="#" class="twitter"><i class="icofont-twitter"></i></a>
+						<a href="#" class="linkedin"><i class="icofont-linkedin"></i></a>
+						<a href="#" class="vimeo"><i class="icofont-vimeo"></i></a>
+					</div>
+				</div>
+			</div>
+		</nav>
+	</div>
+	<!-- Mobile Menu Ending Here -->
+
+	<!-- header section start -->
+	<header class="header-section d-xl-block d-none">
+		<div class="container-fluid">
+			<div class="header-area">
+				<div class="logo">
+					<a href="index.html"><img src="assets/images/logo/01.png" alt="logo"></a>
+				</div>
+				<div class="main-menu">
+					<ul>
+						<li>
+							<a class="active" href="#">Home</a>
+						</li>
+						<li><a href="about.html">About</a></li>
+						<li>
+							<a href="chefs.html">Chefs</a>
+						</li>
+						<li>
+							<a href="find.html">Find</a>
+						</li>
+						<li><a href="contact.html">Contact</a></li>
+					</ul>
+				</div>
+				<div class="author-option">
+					<div class="signing-area">
+						<div class="city-lang">
+							<img src="assets/images/header/01.png" alt="city-lang">
+							<select name="lang" id="lang" class="city-dialect">
+								<option value="1">ENG</option>
+								<option value="2">AR-EG</option>
+								<option value="3">AR_UAE</option>
+							</select>
+						</div>
+						<div class="cart-option">
+							<img src="assets/images/header/cart.png" alt="shop-cart">
+							<div class="count-item">04</div>
+							<div class="cart-content">
+								<div class="cart-title">
+									<div class="add-item">4 Items Added</div>
+									<div class="list-close"><a href="#">Close</a></div>
+								</div>
+								<div class="cart-scr scrollbar">
+									<div class="cart-con-item">
+										<div class="cart-item">
+											<div class="cart-inner">
+												<div class="cart-top">
+													<div class="thumb">
+														<a href="#"><img src="assets/images/popular-food/01.jpg"
+																alt=""></a>
+													</div>
+													<div class="content">
+														<a href="#">Split Remedy Split End Shampoo</a>
+													</div>
+													<div class="remove-btn">
+														<a href="#"><i class="icofont-close"></i></a>
+													</div>
+												</div>
+												<div class="cart-bottom">
+													<div class="sing-price">Tk. 140</div>
+													<div class="cart-plus-minus">
+														<div class="dec qtybutton">-</div>
+														<div class="dec qtybutton">-</div>
+														<input class="cart-plus-minus-box" type="text" name="qtybutton"
+															value="1">
+														<div class="inc qtybutton">+</div>
+														<div class="inc qtybutton">+</div>
+													</div>
+													<div class="total-price">Tk. 280.00</div>
+												</div>
+											</div>
+										</div>
+										<div class="cart-item">
+											<div class="cart-inner">
+												<div class="cart-top">
+													<div class="thumb">
+														<a href="#"><img src="assets/images/popular-food/02.jpg"
+																alt=""></a>
+													</div>
+													<div class="content">
+														<a href="#">Split Remedy Split End Shampoo</a>
+													</div>
+													<div class="remove-btn">
+														<a href="#"><i class="icofont-close"></i></a>
+													</div>
+												</div>
+												<div class="cart-bottom">
+													<div class="sing-price">Tk. 140</div>
+													<div class="cart-plus-minus">
+														<div class="dec qtybutton">-</div>
+														<div class="dec qtybutton">-</div>
+														<input class="cart-plus-minus-box" type="text" name="qtybutton"
+															value="1">
+														<div class="inc qtybutton">+</div>
+														<div class="inc qtybutton">+</div>
+													</div>
+													<div class="total-price">Tk. 280.00</div>
+												</div>
+											</div>
+										</div>
+										<div class="cart-item">
+											<div class="cart-inner">
+												<div class="cart-top">
+													<div class="thumb">
+														<a href="#"><img src="assets/images/popular-food/03.jpg"
+																alt=""></a>
+													</div>
+													<div class="content">
+														<a href="#">Split Remedy Split End Shampoo</a>
+													</div>
+													<div class="remove-btn">
+														<a href="#"><i class="icofont-close"></i></a>
+													</div>
+												</div>
+												<div class="cart-bottom">
+													<div class="sing-price">Tk. 140</div>
+													<div class="cart-plus-minus">
+														<div class="dec qtybutton">-</div>
+														<div class="dec qtybutton">-</div>
+														<input class="cart-plus-minus-box" type="text" name="qtybutton"
+															value="1">
+														<div class="inc qtybutton">+</div>
+														<div class="inc qtybutton">+</div>
+													</div>
+													<div class="total-price">Tk. 280.00</div>
+												</div>
+											</div>
+										</div>
+										<div class="cart-item">
+											<div class="cart-inner">
+												<div class="cart-top">
+													<div class="thumb">
+														<a href="#"><img src="assets/images/popular-food/04.jpg"
+																alt=""></a>
+													</div>
+													<div class="content">
+														<a href="#">Split Remedy Split End Shampoo</a>
+													</div>
+													<div class="remove-btn">
+														<a href="#"><i class="icofont-close"></i></a>
+													</div>
+												</div>
+												<div class="cart-bottom">
+													<div class="sing-price">Tk. 140</div>
+													<div class="cart-plus-minus">
+														<div class="dec qtybutton">-</div>
+														<div class="dec qtybutton">-</div>
+														<input class="cart-plus-minus-box" type="text" name="qtybutton"
+															value="1">
+														<div class="inc qtybutton">+</div>
+														<div class="inc qtybutton">+</div>
+													</div>
+													<div class="total-price">Tk. 280.00</div>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="cart-scr-bottom">
+									<ul>
+										<li>
+											<div class="title">Subtotal</div>
+											<div class="price">Tk. 1045.00</div>
+										</li>
+										<li>
+											<div class="title">Shipping</div>
+											<div class="price">Tk. 40.00</div>
+										</li>
+										<li>
+											<div class="title">Cart Total</div>
+											<div class="price">Tk. 1085.00</div>
+										</li>
+									</ul>
+									<a href="#" class="food-btn"><span>Place Order</span></a>
+								</div>
+							</div>
+						</div>
+						<div class="signUp">
+							<ul>
+								<li data-toggle="modal" data-target="#signup"><a><i class="icofont-plus"></i> Sign
+										Up</a></li>
+							</ul>
+						</div>
+						<div class="signIn">
+							<ul>
+								<li data-toggle="modal" data-target="#signin"> <a> <i class="icofont-login"></i> Sign
+										In</a></li>
+							</ul>
+						</div>
+						<!-----------------------------------logged in (cart and profile) large-screen------------------------------------->
+						<!-- 
+							
+							<div class="author-account">
+								<div class="author-icon">
+									<img src="assets/images/chef/author/08.jpg" alt="author">
+								</div>
+								<div class="author-select">
+									<select name="author-select" id="author-select">
+										<option value="1">My Account </option>
+										<option value="2">Log Out </option>
+									</select>
+								</div>
+							</div> -->
+					</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<!-- header section ending -->
+
+
+	<!-- Page Header Section Start Here -->
+	<section class="page-header">
+		<div class="shape-1">
+			<img src="assets/images/banner/shape/01.png" alt="banner">
+		</div>
+		<div class="shape-2">
+			<img src="assets/images/banner/shape/02.png" alt="banner">
+		</div>
+		<div class="container">
+			<div class="page-title text-center">
+				<h3>Chef Profile</h3>
+				<ul class="breadcrumb">
+					<li><a href="#">Home</a></li>
+					<li><a href="#">HomeChef</a></li>
+					<li>Sanzida Laila Trisha</li>
+				</ul>
+			</div>
+		</div>
+	</section>
+	<!-- Page Header Section Ending Here -->
+
+	<!-- Popular Home Chef Section Start Here -->
+	<div class="popular-chef single padding-tb">
+		<div class="container">
+			<div class="section-wrapper">
+				<div class="row justify-content-start">
+					<div class="col-xl-8 col-12">
+						<article>
+							<div class="chef-item">
+								<div class="chef-inner">
+									<div class="chef-thumb">
+										<img src="assets/images/chef/01.jpg" alt="food-chef">
+									</div>
+									<div class="chef-content">
+										<div class="chef-author">
+											<img src="assets/images/chef/author/09.jpg" alt="chef-author">
+										</div>
+										<div class="cover-photo">
+											<div class="photo-icon">
+												<i class="icofont-camera"></i> Change Cover Photo
+											</div>
+											<input type="file" class='photo-file' hidden>
+										</div>
+										<div class="chef-photo">
+											<div class="photo-icon">
+												<i class="icofont-camera"></i>
+											</div>
+											<input type="file" class='photo-file' hidden>
+										</div>
+										<div class="chef-desc">
+											<div class="chef-desc-top">
+												<div class="title">
+													<h5>Sanzida laila Trisha</h5>
+													<p>Month Top <a href="#">Homechef</a></p>
+												</div>
+
+												<div class="right">
+													<div class="rating">
+														<i class="icofont-star"></i>
+														<i class="icofont-star"></i>
+														<i class="icofont-star"></i>
+														<i class="icofont-star"></i>
+														<i class="icofont-star"></i>
+
+													</div>
+													<h6 class="mb-0">(147 ratings)</h6>
+												</div>
+											</div>
+											<div class="chef-desc-middle">
+												<p>I love to cook for my friends and family . Special expertise of
+													Making Pitha , achar , local food and have passonate to produce and
+													promote organic food...</p>
+												<ul>
+													<li><span>Location</span>: Ajman, Al Rawdah</li>
+													<li><span>Joined</span>: 02 December 2018</li>
+													<li><span>Delivered</span>: 30+ Orders</li>
+													<li><span>Earned</span> 100 AED</li>
+													<li><span>Matbokh</span>5</li>
+												</ul>
+											</div>
+
+										</div>
+									</div>
+								</div>
+							</div>
+							<div class="review single padding-tb">
+								<div class="container">
+									<div class="section-wrapper">
+										<div class="related">
+											<ul class="tab-bar">
+												<li class="tablinks" id='defaultOpen'>
+													<span>My Matbokh (5)</span>
+												</li>
+											</ul>
+											<div id="one" class="tabcontent">
+												<div class="new-matbokh">
+													<form class="form">
+														<a class='new-matbokh-title' href="#"><i class="icofont-restaurant"></i> Add New
+															Matbokh</a>
+														<div class="form-group">
+															<label for="matNameEn">Matbokh Name (English)</label>
+															<input name='matNameEn' type="text" class="form-control">
+														</div>
+														<div class="form-group">
+															<label for="matNameAr">Matbokh Name (Arabic)</label>
+															<input name='matNameAr' type="text" class="form-control">
+														</div>
+														<div class="form-group">
+															<label for="matDescEn">Description (English)</label>
+															<input name='matDescEn' type="text" class="form-control">
+														</div>
+														<div class="form-group">
+															<label for="matDescAr">Description (English)</label>
+															<input name="matDescEn" type="text" class="form-control">
+														</div>
+														<div class="form-group">
+															<label>Matbokh Type</label>
+															<select class="form-control">
+																<option>main dishes</option>
+															</select>
+														</div>
+														<div class="form-group">
+															<label>This Matbokh For</label>
+															<select class="form-control">
+																<option>4 persons</option>
+															</select>
+														</div>
+														<div class="form-group">
+															<label>Matbokh Time</label>
+															<select class="form-control">
+																<option>1-2 Days</option>
+															</select>
+														</div>
+														<div class="form-group">
+															<label for="matPrice">Price (AED)</label>
+															<input name="matPrice" type="text"	class="form-control">
+														</div>
+
+														<div class="photo-groups">
+															<p>Upload Photos</p>
+															<div class="upload-photo">
+																<div class="photo-mat-icon">
+																	<i class="icofont-camera"></i> Photo
+																</div>
+																<input type="file" class='photo-mat-file' hidden>
+																<span class="photo-mat-src"></span>
+															</div>
+															<div class="upload-photo">
+																<div class="photo-mat-icon">
+																	<i class="icofont-camera"></i>  Photo
+																</div>
+																<input type="file" class='photo-mat-file' hidden>
+																<span class="photo-mat-src"></span>
+															</div>
+															<div class="upload-photo">
+																<div class="photo-mat-icon">
+																	<i class="icofont-camera"></i>  Photo
+																</div>
+																<input type="file" class='photo-mat-file' hidden>
+																<span class="photo-mat-src"></span>
+															</div>
+															<div class="upload-photo">
+																<div class="photo-mat-icon">
+																	<i class="icofont-camera"></i>  Photo
+																</div>
+																<input type="file" class='photo-mat-file' hidden>
+																<span class="photo-mat-src"></span>
+															</div>
+														</div>
+
+														<div class="buttons-group">
+															<a href="chef-single.html" class="food-btn style-2"><span><i class="icofont-simple-left"></i> Back</span></a>
+															<button class="food-btn style-1" type="submit"><span>Submit</span></button>
+														</div>
+													</form>
+												</div>
+											</div>
+
+										</div>
+									</div>
+								</div>
+							</div>
+						</article>
+					</div>
+
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- Popular Home Chef Section Ending Here -->
+
+
+	<!-- Footer Section Start Here -->
+	<footer class="footer">
+		<div class="bg-shape-style"></div>
+		<div class="container">
+			<div class="footer-top">
+				<div class="footer-area text-center">
+					<div class="footer-logo">
+						<a href="index.html"><img src="assets/images/header/footer/01.png" alt="footer-logo"></a>
+					</div>
+					<div class="scocial-media">
+						<a href="#" class="facebook"><i class="icofont-facebook"></i></a>
+						<a href="#" class="twitter"><i class="icofont-twitter"></i></a>
+						<a href="#" class="linkedin"><i class="icofont-linkedin"></i></a>
+						<a href="#" class="vimeo"><i class="icofont-vimeo"></i></a>
+					</div>
+					<div class="footer-menu">
+						<ul>
+							<li><a href="#">Home</a></li>
+							<li><a href="#">How it works?</a></li>
+							<li><a href="#">Menus</a></li>
+							<li><a href="#">Chefs</a></li>
+							<li><a href="#">Recipes</a></li>
+							<li><a href="#">Contact</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="footer-bottom text-center">
+				<p>&copy; 2019 <a href="#"><span>Mezban</span></a> Design by <a href="#"><span>FoxCoders</span></a>.</p>
+			</div>
+		</div>
+	</footer>
+	<!-- Footer Section Ending Here -->
+
+
+	<!-- scrollToTop start here -->
+	<a href="#" class="scrollToTop"><i class="icofont-swoosh-up"></i></a>
+	<!-- scrollToTop ending here -->
+
+
+
+	<script src="assets/js/jquery.js"></script>
+	<script src="assets/js/waypoints.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/isotope.pkgd.min.js"></script>
+	<script src="assets/js/wow.min.js"></script>
+	<script src="assets/js/tab.js"></script>
+	<script src="assets/js/lightcase.js"></script>
+	<script src="assets/js/swiper.min.js"></script>
+	<script src="assets/js/jquery.counterup.min.js"></script>
+	<script src="assets/js/functions.js"></script>
+</body>
+
+</html>

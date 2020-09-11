@@ -151,10 +151,13 @@
 			1024: {
 				slidesPerView: 5,
 			},
-			992: {
+			991: {
 				slidesPerView: 4,
             },
-            576: {
+            767: {
+				slidesPerView: 3,
+            },
+            575: {
 				slidesPerView: 2,
             },
             340: {
@@ -282,5 +285,21 @@
     });
 
 
+    /**********************Start open photos in chef profile********************** */
+    $('.photo-icon').on('click',function(){
+        $(this).next('.photo-file').click();
+    });
+
+    $('.photo-mat-icon').on('click',function(){
+        $(this).next('.photo-mat-file').click();
+    });
+
+    $('.photo-mat-file').on('change',function(){
+        let fileVal=$(this).val();
+        fileVal = fileVal.match(/[\/\\]([\w\d\s\.\-\(\)]+)$/)[1];
+        $(this).next('.photo-mat-src').text(fileVal);
+    });
+
+    /**********************End open photos in chef profile********************** */
 
 }(jQuery));
