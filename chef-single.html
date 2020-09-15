@@ -627,32 +627,39 @@
                                                             <ul>
                                                                 <li>
                                                                     <div class="left">Name</div>
-                                                                    <div class="right">Om Hassan <i class="icofont-ui-edit"></i></div> 
+																	<div class="right chefName"><span class="">Om Hassan</span> <i class="icofont-ui-edit"></i>
+																	</div> 	
                                                                 </li>
                                                                 <li>
                                                                     <div class="left">About</div>
-                                                                    <div class="right">I love cooking I love cooking I love cooking I love cooking I love cooking I love cooking  <i class="icofont-ui-edit"></i></div>
+																	<div class="right chefAbout">I love cooking I love cooking I love cooking I love cooking I love cooking I love cooking  <i class="icofont-ui-edit"></i>
+																	</div>
                                                              
                                                                 </li>
                                                                 <li>
                                                                     <div class="left">Email</div>
-                                                                    <div class="right">A@yahoo.com <i class="icofont-ui-edit"></i></div>
+																	<div class="right chefEmail">A@yahoo.com <i class="icofont-ui-edit"></i>
+																	</div>
                                                                     
                                                                 </li>
                                                                 
                                                                 <li>
                                                                     <div class="left">Phone</div>
-                                                                    <div class="right">0552060703 <i class="icofont-ui-edit"></i></div>
+																	<div class="right chefPhone">0552060703 <i class="icofont-ui-edit"></i>
+																	</div>
                                                                     
                                                                 </li>
                                                                 <li>
                                                                     <div class="left">Password</div>
-                                                                    <div class="right">********** <i class="icofont-ui-edit"></i></div>
+																	<div class="right chefPass"><span>*********</span><i class="icofont-ui-edit"></i>
+																		<output hidden></output>
+																	</div>
                                                                     
                                                                 </li>
                                                                 <li>
                                                                     <div class="left">Location</div>
-                                                                    <div class="right">Ajman, Al Rawdah <i class="icofont-ui-edit"></i></div>
+																	<div class="right chefLocation">Ajman, Al Rawdah <i class="icofont-ui-edit"></i>
+																	</div>
                                                                     
                                                                 </li>
                                                             </ul>
@@ -1065,6 +1072,9 @@
 
 		
 		<script src="assets/js/jquery.js"></script>
+		<!------------chef-single------------>
+		<script src='assets/js/inline-edit.jquery.js'></script>
+		<!------------end chef single------------->
 		<script src="assets/js/waypoints.min.js"></script>
 		<script src="assets/js/bootstrap.min.js"></script>
 		<script src="assets/js/isotope.pkgd.min.js"></script>
@@ -1074,5 +1084,53 @@
 		<script src="assets/js/swiper.min.js"></script>
 		<script src="assets/js/jquery.counterup.min.js"></script>
 		<script src="assets/js/functions.js"></script>
+		<script>
+			
+					/********************************edit Profile in place******************************* */
+							$(".chefName").inlineEdit({
+
+							type:'text'
+
+							});
+
+							$(".chefAbout").inlineEdit({
+
+							type:'textarea'
+
+							});
+
+							$(".chefEmail").inlineEdit({
+
+							type:'text'
+
+							});
+
+							$(".chefPhone").inlineEdit({
+
+							type:'text'
+
+							});
+							$(".chefPass").inlineEdit({
+
+							type:'pass',
+							onEdit:function (el) {
+								el.find('input').attr('type','password');
+							return el.find('input').val();
+								},
+							onChange:function (el){  
+							el.find('output').text(el.find('span').text());
+							el.find('span').text('*********');
+							}
+							});
+
+							$(".chefLocation").inlineEdit({
+
+							type:'textarea'
+
+							});
+
+					/**************************End Edit Profile in place***************************** */
+
+		</script>
 	</body>
 </html>

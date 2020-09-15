@@ -48,13 +48,6 @@
         }
     });
 
-    // switching flags
-    $('.city-dialect').on('change',function(){
-        let imgSrc="assets/images/header/0"+ $(this).val() + ".png";
-        $('.city-dialect').not(this).val(this.value).prev().attr('src',imgSrc);
-        $('.city-dialect').prev().val(this.value).attr('src',imgSrc);
-        // console.log("assets/images/header/0"+ $(this).val() + ".png");
-    });
 
     // scroll up start here
     $(function(){
@@ -301,5 +294,35 @@
     });
 
     /**********************End open photos in chef profile********************** */
+
+
+
+ /*******************************Delivery Options***************************** */
+ $(".howToPay").on('click', function(){
+    $('.payMethod').css('display','none');
+
+    if( $(this).is(':checked') ){
+        let switchClass= $(this).val();
+       $('#'+switchClass).css('display','block');
+    //    alert(switchClass);
+    };
+ });
+
+
+ $('.chooseBank').on('change',function(){
+    $('.bankAccount').css('display','none');
+     let bankName=$(this).val();
+     $('#'+bankName).css('display','block');
+
+ });
+
+ $('.photo-icon').on('click',function(){
+    $(this).next('.photo-file').click();
+});
+
+ /*******************************Delivery Options***************************** */
+
+
+
 
 }(jQuery));

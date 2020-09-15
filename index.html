@@ -4,13 +4,14 @@
 		<meta charset="UTF-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 		<meta http-equiv="X-UA-Compatible" content="ie=edge">
-
+		<!-- <base href="file:///D:/projects/matbokh" /> -->
 		<!-- favicon -->
 		<link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
 		<!-- animate scss -->
 		<link rel="stylesheet" href="assets/css/animate.css">
 		<!-- bootstarp css -->
 		<link rel="stylesheet" href="assets/css/bootstrap.min.css">
+		<link rel="stylesheet" href="assets/css/bootstrap-select.css">
 		<!-- icofont -->
 		<link rel="stylesheet" href="assets/css/icofont.min.css">
 		<!-- lightcase css -->
@@ -25,6 +26,7 @@
 
 	<!------switch between ltr - rtl ------>
 	<body>
+
 
 		<!-------------------signup/signin modals--------------------->
 
@@ -145,17 +147,29 @@
                             <li>
                                 <a href="Contact.htm">Contact</a>   
 							</li>
-											
-
+						
 							<li class="border-bottom">
 								<div class="city-lang">
-									<img src="assets/images/header/01.png" alt="city-lang">
-									<select name="lang" id="lang" class="city-dialect">
-										<option value="1">ENG</option>
-										<option value="2">AR-EG</option>
-										<option value="3">AR-UAE</option>
-									</select>
+									
+									<div class="outline-select city-dialect mb-0">
+										<select name="lang" id="lang">
+											<option value="1">ENG</option>
+											<option value="2">AR</option>
+										</select>
+									</div>
+									<base href="file:///D:/projects/matbokh/" />
+									
 								</div>
+								<li class="border-bottom">
+									<div class="city-lang">
+										<select class="my-image-selectpicker">
+											<option data-thumbnail="assets/images/header/01.png">USA</option>
+											<option data-thumbnail="/assets/images/header/02.png">Eg</option>
+											<option data-thumbnail="/assets/images/header/03.png">UAE</option>
+										</select>
+									</div>
+								</li>
+								
 							</li>
 							<li class="border-bottom">
 								<div class="cart-option">
@@ -362,11 +376,18 @@
 					<div class="author-option">
 						<div class="signing-area">
 							<div class="city-lang">
-								<img src="assets/images/header/01.png" alt="city-lang">
-								<select name="lang" id="lang" class="city-dialect">
-									<option value="1">ENG</option>
-									<option value="2">AR-EG</option>
-									<option value="3">AR_UAE</option>
+								<base href="file:///D:/projects/matbokh/" />
+								
+								<div class="outline-select city-dialect mb-0">
+									<select name="lang" id="lang">
+										<option value="1">ENG</option>
+										<option value="2">AR</option>
+									</select>
+								</div>
+								<select class="my-image-selectpicker">
+									<option data-thumbnail="assets/images/header/01.png">USA</option>
+									<option data-thumbnail="/assets/images/header/02.png">Eg</option>
+									<option data-thumbnail="/assets/images/header/03.png">UAE</option>
 								</select>
 							</div>
 							<div class="cart-option">
@@ -1797,11 +1818,34 @@
 		<script src="assets/js/waypoints.min.js"></script>
 		<script src="assets/js/popper.min.js"></script>
 		<script src="assets/js/bootstrap.min.js"></script>
+		<script src='assets/js/bootstrap-select.js'></script>
 		<script src="assets/js/isotope.pkgd.min.js"></script>
 		<script src="assets/js/wow.min.js"></script>
 		<script src="assets/js/swiper.min.js"></script>
 		<script src="assets/js/lightcase.js"></script>
 		<script src="assets/js/jquery.counterup.min.js"></script>
 		<script src="assets/js/functions.js"></script>
+		<script>
+			
+    /***************************country select********************** */
+    const BASE_URL = $('base[ href ]').attr('href');
+
+		const $_SELECT_PICKER = $('.my-image-selectpicker');
+
+		$_SELECT_PICKER.find('option').each((idx, elem) => {
+			const $OPTION = $(elem);
+			const IMAGE_URL = $OPTION.attr('data-thumbnail');
+
+			if (IMAGE_URL) {
+				$OPTION.attr('data-content', "<img src='%i'/> %s".replace(/%i/, BASE_URL + IMAGE_URL).replace(/%s/, $OPTION.text()))
+			}
+
+			console.warn('option:', idx, $OPTION)
+		});
+
+		$_SELECT_PICKER.selectpicker();
+
+		/************************end country select****************************** */
+		</script>
 	</body>
 </html>
