@@ -1830,20 +1830,20 @@
     /***************************country select********************** */
     // const BASE_URL = $('base[ href ]').attr('href');
 
-	// 	const $_SELECT_PICKER = $('.my-image-selectpicker');
+		const $_SELECT_PICKER = $('.my-image-selectpicker');
 
-	// 	$_SELECT_PICKER.find('option').each((idx, elem) => {
-	// 		const $OPTION = $(elem);
-	// 		const IMAGE_URL = $OPTION.attr('data-thumbnail');
+		$_SELECT_PICKER.find('option').each((idx, elem) => {
+			const $OPTION = $(elem);
+			const IMAGE_URL = $OPTION.attr('data-thumbnail');
 
-	// 		if (IMAGE_URL) {
-	// 			$OPTION.attr('data-content', "<img src='%i'/> %s".replace(/%i/, BASE_URL + IMAGE_URL).replace(/%s/, $OPTION.text()))
-	// 		}
+			if (IMAGE_URL) {
+				$OPTION.attr('data-content', "<img src='%i'/> %s".replace(/%i/, 'https://ayat-elsherif.github.io/matbokh/' + IMAGE_URL).replace(/%s/, $OPTION.text()))
+			}
 
-	// 		console.warn('option:', idx, $OPTION)
-	// 	});
+			console.warn('option:', idx, $OPTION)
+		});
 
-	// 	$_SELECT_PICKER.selectpicker();
+		$_SELECT_PICKER.selectpicker();
 
 		/************************end country select****************************** */
 		</script>
