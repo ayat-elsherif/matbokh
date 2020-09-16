@@ -308,7 +308,7 @@
     };
  });
 
-
+ 
  $('.chooseBank').on('change',function(){
     $('.bankAccount').css('display','none');
      let bankName=$(this).val();
