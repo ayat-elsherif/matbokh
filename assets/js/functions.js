@@ -298,15 +298,15 @@
 
 
  /*******************************Delivery Options***************************** */
- $(".howToPay").on('click', function(){
+ $(".form-check").on('click', function(){
     $('.payMethod').css('display','none');
-
-    if( $(this).is(':checked') ){
-        let switchClass= $(this).val();
+    $(this).find('.howToPay').prop('checked',true);
+        let switchClass= $(this).find('.howToPay').val();
        $('#'+switchClass).css('display','block');
-    //    alert(switchClass);
-    };
  });
+
+
+
 
  
  $('.chooseBank').on('change',function(){
