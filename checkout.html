@@ -110,7 +110,7 @@
 
 
 		<!-- preloader -->
-		<div class="preloader"><div class="load loade"><hr/><hr/><hr/><hr/></div></div>
+		<!-- <div class="preloader"><div class="load loade"><hr/><hr/><hr/><hr/></div></div> -->
         <!-- preloader -->
         
     
@@ -675,7 +675,80 @@
                             <div class="row">
                                 <div class="col-md-6 col-12">
                                     <div class="delivery-info">
-                                        <h6>Delivery To..</h6>
+										<h5>Delivery Options</h5>
+
+										<div class="form-check">
+											<input type="radio" name='howToPay' value='onDelivery' class='howToPay form-check-input'>
+											 <label class="form-check-label">Cash On Delivery</label>
+										</div>
+                                        <div class="payMethod animated fadeIn mb-4"  id='onDelivery'>
+										<div class="theme-color">20 UAE Fees</div>
+										</div>
+
+										<div class="form-check">
+											
+												<input type="radio" name='howToPay' value='bankTransfer' class='howToPay form-check-input'> 
+												<label class="form-check-label">Bank Transfer</label>
+
+										</div>
+                                        <div class="payMethod animated fadeIn"  id='bankTransfer'>
+											<h6>Payment</h6>
+                                        <div class="outline-select">
+                                            <select class="chooseBank">
+                                                <option value="EmirateBank">Choose Bank..</option>
+                                                <option value="AbudhabiBank">Abu dhabi Commercial Bank</option>
+                                                <option value="DubaiBank">Dubai Islamic Bank</option>
+                                            </select>
+                                            <span class="select-icon"><i class="icofont-caret-down"></i></span>
+										</div>
+										<div class="bankAccount" id='AbudhabiBank'>
+											<p>Account Number: 11310217910001 <br>
+												NAME: MAHMOUD ABDELFATTAH <br>
+												IBAN: AE840030011310217910001 <br></p>
+												<div class="photo-groups">
+													<p class="mb-1">Upload photo of bank receipt</p>
+												<div class="upload-photo">
+													
+													<div class="photo-mat-icon mx-2">
+														Upload
+													</div>
+													<input type="file" class="photo-mat-file" accept="image/*" hidden="">
+													<span class="photo-mat-src"></span>
+												</div>
+												</div>
+										</div>
+										<div class="bankAccount" id='DubaiBank'>
+											<p>Account Number: 009580143455001 <br>
+												NAME: MAHMOUD ABDELFATTAH <br>
+												IBAN Number: AE640240009580143455001 <br>
+												</p>
+												<div class="photo-groups">
+													<p class="mb-1">Upload photo of bank receipt</p>
+												<div class="upload-photo">
+													
+													<div class="photo-mat-icon mx-2">
+														Upload
+													</div>
+													<input type="file" class="photo-mat-file" accept="image/*" hidden="">
+													<span class="photo-mat-src"></span>
+												</div>
+												</div>
+										</div>
+										</div>
+									</div>
+										
+									<div class="contact-info">
+										<h6 class="mt-5">Contact Details</h6>
+										<div class="form-group">
+											<input type="text" name="fullName" placeholder="Full Name" class="form-control full-name"/>	
+
+										</div>
+                                        <input type="text" name="phoneNumber" placeholder="Phone Number" class="form-control phone-number"/>	
+                                   
+                               
+									</div>
+									<div class="mt-5">
+										<h6>Delivery To..</h6>
                                         <div class="outline-select">
                                             <select>
                                                 <option value="volvo">Choose Emirate</option>
@@ -684,28 +757,17 @@
                                             </select>
                                             <span class="select-icon"><i class="icofont-caret-down"></i></span>
                                         </div>
+										
+
                                         <div class="outline-select">
                                             <select>
                                                 <option value="volvo">Choose Area..</option>
                                                 <option value="saab">Area</option>
                                             </select>
                                             <span class="select-icon"><i class="icofont-caret-down"></i></span>
-                                        </div>
-                                        <h6 class="mt-5 ">Payment</h6>
-                                        <div class="outline-select">
-                                            <select>
-                                                <option value="volvo">Choose Emirate</option>
-                                                <option value="saab">Abu dhabi</option>
-                                                <option value="saab">Dubai</option>
-                                            </select>
-                                            <span class="select-icon"><i class="icofont-caret-down"></i></span>
-                                        </div>
-										<h6 class="mt-5">Contact Details</h6>
-
-                                        <input type="text" name="fullName" placeholder="Full Name" class="form-control full-name"/>	
-                                        <input type="text" name="phoneNumber" placeholder="Phone Number" class="form-control phone-number"/>	
-                                    </div>
-                                </div>
+										</div>
+									</div>
+								</div>
                                 <div class="col-md-6 col-12">
                                     <div class="cart-overview">
                                         <h4>Cart Totals</h4>
