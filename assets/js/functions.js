@@ -303,10 +303,12 @@
     $(this).find('.howToPay').prop('checked',true);
         let switchClass= $(this).find('.howToPay').val();
        $('#'+switchClass).css('display','block');
+       if(switchClass=="onDelivery"){
+            $('.cashOnDelLabel').css('display','flex');
+       }else{
+        $('.cashOnDelLabel').css('display','none');
+       }
  });
-
-
-
 
  
  $('.chooseBank').on('change',function(){
@@ -322,7 +324,26 @@
 
  /*******************************Delivery Options***************************** */
 
+/****************************checkout Calculation*************************** */
+   
+    $('.inc , .dec').on('click',function(){
+        let allSubTotal=document.querySelectorAll('.products');
+        let product=$(this).parents('.products');
+        let productPrice=product.find('.product-price').text();
+        productPrice= productPrice.slice(1,4);
+        let addProduct=product.find('.cart-plus-minus-box').val();
+        // let productNumber=$('.product-number');
+        let productTotal=product.find('.product-total');
+                
+        productTotal.text('$'+(productPrice * addProduct));
+      
+        // productTotal.on('change',function(){
+        //     for(let i=0;i<allSubTotal.length;i++){
 
+        //     }
+        // });
+    });
 
+    
 
 }(jQuery));
