@@ -308,6 +308,7 @@
        }else{
         $('.cashOnDelLabel').css('display','none');
        }
+       allTotal();
  });
 
  
@@ -322,28 +323,46 @@
     $(this).next('.photo-file').click();
 });
 
- /*******************************Delivery Options***************************** */
 
-/****************************checkout Calculation*************************** */
+    	/****************************checkout Calculation*************************** */
    
-    $('.inc , .dec').on('click',function(){
-        let allSubTotal=document.querySelectorAll('.products');
+	$('.inc , .dec').on('click',function(){
         let product=$(this).parents('.products');
-        let productPrice=product.find('.product-price').text();
-        productPrice= productPrice.slice(1,4);
+        let productPrice=product.find('.product-price span').text();
         let addProduct=product.find('.cart-plus-minus-box').val();
-        // let productNumber=$('.product-number');
-        let productTotal=product.find('.product-total');
+        let productTotal=product.find('.product-total span');
                 
-        productTotal.text('$'+(productPrice * addProduct));
-      
-        // productTotal.on('change',function(){
-        //     for(let i=0;i<allSubTotal.length;i++){
+		productTotal.text((productPrice * addProduct));
+		subTotal();
+		allTotal();
+	});
 
-        //     }
-        // });
-    });
+		subTotal();
+		allTotal();
+		function subTotal(){
+			let singleProductTotal=$('.product-total span');
+		let allSubTotal=$('.allSubTotal .pull-right span');
+		let x=0;
+            for(let i = 0 ;i<singleProductTotal.length;i++){
+				x +=parseInt($(singleProductTotal[i]).text());
+			}
+			allSubTotal.text(x);
+		}
 
+	function allTotal(){
+		let allSubTotal=$('.allSubTotal .pull-right span').text();
+		let allShipping=$('.allShipping .pull-right span').text();
+		let cashOnDelLabel=$('.cashOnDelLabel .pull-right span').text();
+		let finalTotal=$('.finalTotal .pull-right span');
+		if($('.cashOnDelLabel').css('display')=='flex'){
+			let summation= parseInt(allSubTotal) + parseInt(allShipping) +parseInt(cashOnDelLabel);
+			finalTotal.text(summation);
+		}
+		else if($('.cashOnDelLabel').css('display')=='none'){
+			let x= parseInt(allSubTotal) + parseInt(allShipping);
+			finalTotal.text(x);
+		}	
+	}
     
 
 }(jQuery));
