@@ -365,4 +365,21 @@
 	}
     
 
+       /*****************************Status switch button*************************** */
+       $('.custom-switch').on('change',function(){
+        let switchStatus='.customSwitches';
+        let switchLabel='.customLabel';
+        let customAvail='.customAvail';
+        if($(this).find(switchStatus).is(':checked')){
+            console.log('true');
+            $(this).next(switchLabel).text("I am Ready");
+            $(this).find(customAvail).addClass('fadeIn').removeClass('fadeOut');
+           }
+           else{
+             console.log('false');
+             $(this).next(switchLabel).text('I am not Ready');
+             $(this).find(customAvail).addClass('fadeOut').removeClass('fadeIn');
+           }
+    });
+
 }(jQuery));
