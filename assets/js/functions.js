@@ -374,11 +374,13 @@
             console.log('true');
             $(this).next(switchLabel).text("I am Ready");
             $(this).find(customAvail).addClass('fadeIn').removeClass('fadeOut');
+            $(this).parents('.p-food-item').css('opacity','1');
            }
            else{
              console.log('false');
              $(this).next(switchLabel).text('I am not Ready');
              $(this).find(customAvail).addClass('fadeOut').removeClass('fadeIn');
+             $(this).parents('.p-food-item').css('opacity','.6');
            }
     });
 
