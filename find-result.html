@@ -106,7 +106,7 @@
 		<!-------------------signup/signin modals--------------------->
 
 		<!-- preloader -->
-		<div class="preloader"><div class="load loade"><hr/><hr/><hr/><hr/></div></div>
+		<!-- <div class="preloader"><div class="load loade"><hr/><hr/><hr/><hr/></div></div> -->
         <!-- preloader -->
         
         
@@ -467,7 +467,7 @@
 									</div>
 								</div>
 							</div>
-							<div class="author-account">
+							<!-- <div class="author-account">
 								<div class="author-icon">
 									<img src="assets/images/chef/author/08.jpg" alt="author">
 								</div>
@@ -477,7 +477,7 @@
 										<option value="2">Log Out </option>
 									</select>
 								</div>
-							</div>
+							</div> -->
 						</div>
 					</div>
 				</div>
@@ -501,7 +501,60 @@
                         <li><a href="index.html">Home</a></li>
                         <li>Find Matbokh</li>
 					</ul>
-					<div class="right"><i class="icofont-home"></i> Dubai, AlAwir <a href="#">(Change area)</a></div>
+					<div class="right">
+						<i class="icofont-home"></i> Dubai, AlAwir <span class="toggleSearch">(Change area)</span></div>
+
+
+					<section class="banner resultSearch animated">
+						<div class="banner-area">
+							<div class="container">
+								<div class="row">
+									<div class="col-xl-10 offset-xl-1 col-12 offset-0">
+										<div class="banner-content find-matbokh">
+											<form action="/">
+												<div class="row mx-0 w-100">
+													<div class="codexcoder-selectoption col-lg-3 col-md-4">
+														<select name="text">
+															<option value="1">Find A Food</option>
+															<option value="2">Find A Chef</option>
+														</select>
+													</div>
+													<div class="col-lg-2 col-md-4 col-12 find-emirate">									
+														<select name="emirateName">
+															<option>
+																Emirate
+															</option>
+															</select>
+														<i class="icofont-google-map"></i>
+														<i class="icofont-thin-down"></i>
+													</div>
+													<div class="col-lg-2 col-md-4 col-12 find-area">
+														<select name="areaName" >
+															<option>Your Area</option>
+															</select>
+														<i class="icofont-home"></i>
+														<i class="icofont-thin-down"></i>
+													</div>
+													<div class="col-lg-2 col-md-4 col-12 find-type">
+														<select >
+															<option>Type</option>
+														</select>
+														<i class="icofont-restaurant"></i>
+														<i class="icofont-thin-down"></i>
+													</div>
+													<div class="col-lg-2 col-md-4 col-12 find-type">
+														<input placeholder="Search..">
+														<i class="icofont-restaurant"></i>
+													</div>
+													<button type="submit" class='col-lg-1 col-md-4 col-12'><i class="icofont-search-2"></i></button>
+												</div>
+											</form>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
                 </div>
             </div>
         </section>
@@ -534,8 +587,7 @@
 			<section class="popular-foods padding-tb tab-pane fade show active" id="rating" role="tabpanel" aria-labelledby="rating-tab" style="background-color: #fafeff;">
 				<div class="container">
 					<div class="section-wrapper">
-						<div class="row">
-							
+						<div class="row">		
 							<div class="col-xl-4 col-md-6 col-12">
 								<div class="p-food-item">
 									<div class="p-food-inner">
@@ -2130,6 +2182,16 @@
 		<script src="assets/js/swiper.min.js"></script>
 		<script src="assets/js/lightcase.js"></script>
 		<script src="assets/js/jquery.counterup.min.js"></script>
-        <script src="assets/js/functions.js"></script>
+		<script src="assets/js/functions.js"></script>
+		<script>
+			$('.toggleSearch').on('click',function(){
+				if($('.resultSearch').hasClass('showSearch')){
+					$('.resultSearch').removeClass('showSearch fadeIn');
+				}
+				else{
+					$('.resultSearch').addClass('showSearch fadeIn');
+				}
+			});
+		</script>
 	</body>
 </html>
