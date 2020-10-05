@@ -324,6 +324,45 @@
 });
 
 
+        /********************************cart calculation****************************** */    
+	$('.inc , .dec').on('click',function(){
+        let product=$(this).parents('.cart-bottom');
+        let productPrice=product.find('.sing-price span').text();
+        let addProduct=product.find('.cart-plus-minus-box').val();
+        let productTotal=product.find('.total-price span');
+        
+		productTotal.text((productPrice * addProduct));
+        subTotalPrice();
+        allTotalPrice();
+	});
+    subTotalPrice();
+    allTotalPrice();
+        
+		function subTotalPrice(){
+			let singleProductTotal=$('.total-price span');
+            let allSubTotal=$('.subTotal-price .price span');
+            let x=0;
+            for(let i = 0 ;i<singleProductTotal.length;i++){
+                x +=parseInt($(singleProductTotal[i]).text());
+			}
+            allSubTotal.text(x);
+		}
+
+	function allTotalPrice(){
+		let allSubTotal=$('.subTotal-price .price span').text();
+		let allShipping=$('.shipping-price .price span').text();
+		// let cashOnDelLabel=$('.cashOnDelivery .price span').text();
+		let finalTotal=$('.wholeTotal-price .price span');
+		// if($('.cashOnDelLabel').css('display')=='flex'){
+		// 	let summation= parseInt(allSubTotal) + parseInt(allShipping) +parseInt(cashOnDelLabel);
+		// 	finalTotal.text(summation);
+		// }
+		// else if($('.cashOnDelLabel').css('display')=='none'){
+			let x= parseInt(allSubTotal) + parseInt(allShipping);
+			finalTotal.text(x);
+		// }	
+	}
+
     	/****************************checkout Calculation*************************** */
    
 	$('.inc , .dec').on('click',function(){
