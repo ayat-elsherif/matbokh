@@ -304,9 +304,9 @@
         let switchClass= $(this).find('.howToPay').val();
        $('#'+switchClass).css('display','block');
        if(switchClass=="onDelivery"){
-            $('.cashOnDelLabel').css('display','flex');
+            $('.cashOnDelLabel').parent().css('display','block');
        }else{
-        $('.cashOnDelLabel').css('display','none');
+        $('.cashOnDelLabel').parent().css('display','block');
        }
        allTotal();
  });
@@ -393,11 +393,11 @@
 		let allShipping=$('.allShipping .pull-right span').text();
 		let cashOnDelLabel=$('.cashOnDelLabel .pull-right span').text();
 		let finalTotal=$('.finalTotal .pull-right span');
-		if($('.cashOnDelLabel').css('display')=='flex'){
+		if($('.cashOnDelLabel').parent().css('display')=='block'){
 			let summation= parseInt(allSubTotal) + parseInt(allShipping) +parseInt(cashOnDelLabel);
 			finalTotal.text(summation);
 		}
-		else if($('.cashOnDelLabel').css('display')=='none'){
+		else if($('.cashOnDelLabel').parent().css('display')=='none'){
 			let x= parseInt(allSubTotal) + parseInt(allShipping);
 			finalTotal.text(x);
 		}	
@@ -423,4 +423,6 @@
            }
     });
 
+
+    
 }(jQuery));
