@@ -130,6 +130,32 @@
 			  </div>
 			</div>
 		  </div>
+
+
+		  <div class="modal fade" id="deleteWholeCheck" tabindex="-1" role="dialog" aria-labelledby="deleteMatbokhLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+			  <div class="modal-content">
+				
+				<div class="modal-body">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true"><i class="icofont-close-line"></i></span>
+					  </button>
+					  <div class="delete-matbokh">
+							<p>Are you sure you want to delete this whole check?</p>
+							<div class="button-group">
+								<button type="button" class="food-btn style-2" data-dismiss="modal" aria-label="Close">
+									<span aria-hidden="true"><i class="icofont-close-line"></i> Cancel</span>
+								  </button>
+								  <button type="button" class="food-btn style-2">
+									<span aria-hidden="true"><i class="icofont-ui-delete"></i> Delete</span>
+								  </button>
+							  </div>
+					  </div>
+					  
+				</div>
+			  </div>
+			</div>
+		  </div>
 		<!-------------------signup/signin modals--------------------->
 
 
@@ -569,126 +595,18 @@
 	    <div class="shop-cart padding-tb">
             <div class="container">
                 <div class="section-wrapper">
-					<div class="cart-details pb-4">
-                        <div class="shiping-box">
-                            <div class="row mb-5">
-                                <div class="col-md-6 col-12">
-                                    
-									<div class="contact-info">
-										<h5>Contact Details</h5>
-										<div class="form-group">
-											<input type="text" name="fullName" placeholder="Full Name" class="form-control full-name"/>	
-
-										</div>
-                                        <input type="text" name="phoneNumber" placeholder="Phone Number" class="form-control phone-number"/>	
-                                   
-                               
-									</div>
-									<div class="delivery-info">
-										<h5>Delivery Options</h5>
-
-										<div class="form-check">
-											<input type="radio" name='howToPay' value='onDelivery' class='howToPay form-check-input'>
-											 <label class="form-check-label">Cash On Delivery</label>
-										</div>
-                                        <div class="payMethod animated fadeIn mb-4"  id='onDelivery'>
-										<div class="theme-color">20 AED Fees</div>
-										</div>
-
-										<div class="form-check">
-											
-												<input type="radio" name='howToPay' value='bankTransfer' class='howToPay form-check-input'> 
-												<label class="form-check-label">Bank Transfer</label>
-
-										</div>
-                                        <div class="payMethod animated fadeIn"  id='bankTransfer'>
-											<h6>Payment</h6>
-                                        <div class="outline-select">
-                                            <select class="chooseBank">
-                                                <option value="EmirateBank">Choose Bank..</option>
-                                                <option value="AbudhabiBank">Abu dhabi Commercial Bank</option>
-                                                <option value="DubaiBank">Dubai Islamic Bank</option>
-                                            </select>
-                                            <span class="select-icon"><i class="icofont-caret-down"></i></span>
-										</div>
-										<div class="bankAccount" id='AbudhabiBank'>
-											<p>Account Number: 11310217910001 <br>
-												NAME: MAHMOUD ABDELFATTAH <br>
-												IBAN: AE840030011310217910001 <br></p>
-												<div class="photo-groups">
-													<p class="mb-1">Upload photo of bank receipt</p>
-												<div class="upload-photo">
-													
-													<div class="photo-mat-icon mx-2">
-														Upload
-													</div>
-													<input type="file" class="photo-mat-file" accept="image/*" hidden="">
-													<span class="photo-mat-src"></span>
-												</div>
-												</div>
-										</div>
-										<div class="bankAccount" id='DubaiBank'>
-											<p>Account Number: 009580143455001 <br>
-												NAME: MAHMOUD ABDELFATTAH <br>
-												IBAN Number: AE640240009580143455001 <br>
-												</p>
-												<div class="photo-groups">
-													<p class="mb-1">Upload photo of bank receipt</p>
-												<div class="upload-photo">
-													
-													<div class="photo-mat-icon mx-2">
-														Upload
-													</div>
-													<input type="file" class="photo-mat-file" accept="image/*" hidden="">
-													<span class="photo-mat-src"></span>
-												</div>
-												</div>
-										</div>
-										</div>
-									</div>
-								
-
-								</div>
-                                <div class="col-md-6 col-12">
-									
-									<div class="deliveryTo">
-										<h5>Delivery To..</h5>
-                                        <div class="outline-select">
-                                            <select>
-                                                <option value="volvo">Choose Emirate</option>
-                                                <option value="saab">Abu dhabi</option>
-                                                <option value="saab">Dubai</option>
-                                            </select>
-                                            <span class="select-icon"><i class="icofont-caret-down"></i></span>
-                                        </div>
-										
-
-                                        <div class="outline-select">
-                                            <select>
-                                                <option value="volvo">Choose Area..</option>
-                                                <option value="saab">Area</option>
-                                            </select>
-                                            <span class="select-icon"><i class="icofont-caret-down"></i></span>
-										</div>
-										<div class="form-group">
-											<textarea placeholder="Detailed Address"  class="detailedAdd" rows='3'></textarea>
-										</div>
-									</div>	
-								</div>
-								<div class="col-sm-4 offset-sm-4 col-12 offset-0 mt-5">
-									<button class="col-12 food-btn style-2"> <span>Save</span></button>
-								</div>
-                            </div>
-                        </div>
-                    </div>
+					
                     <div class="cart-single-checkout" id='receipt1'>
 						<div class="check-data">	
 							<div class="row">
-								<div class="col-lg-4 col-md-6 col-12">
+								<div class="col-4">
 									<p>Chef: Nehal Ahmed</p>
 								</div>
-								<div class="col-lg-4 col-md-6 col-12">
+								<div class="col-4">
 									<p>Check No: 12345575</p>
+								</div>
+								<div class="col-4 delete-check" data-toggle="modal" data-target="#deleteWholeCheck">
+									<i class="icofont-trash"></i>
 								</div>
 							</div>
 						</div>	
@@ -773,17 +691,12 @@
                             </tbody>
 						</table>
 					
-						<div class="cart-overview">
-							<h4 class="px-3 mt-4">Cart Totals</h4>
+						<div class="cart-overview pb-3">
+							<h4 class="px-3 mt-4">Shipping Fees</h4>
 							<ul class="row">
+							
 								<li class="col-md-6 col-12">
-									<div class="allSubTotal">
-										<span class="pull-left">Cart Subtotal</span>
-										<p class="pull-right"><span>750</span> AED</p>
-									</div>
-								</li>
-								<li class="col-md-6 col-12">
-									<div class="allShipping">
+									<div class="ShippingCost">
 										<span class="pull-left">Shipping and Handling</span>
 										<p class="pull-right"><span>50</span> AED</p>
 									</div>
@@ -794,31 +707,23 @@
 										<p class="pull-right"><span>20</span> AED</p>
 									</div>
 								</li>
-								<li class="col-md-6 col-12">
-									<div class="finalTotal">
-										<span class="pull-left">TOTAL</span>
-										<p class="pull-right"><span>750</span> AED</p>
-									</div>
-								</li>
+							
 							</ul>
-							<div class="text-center mt-3 pb-1">
-								<div class="row mx-0">
-									<button class="col-md-4 offset-md-4 col-12 food-btn"> <span>Order</span></button>
-								</div>
-								<p class="px-3"> By clicking Order, you agree to our <a href="#">Terms & Conditions</a>
-								</p>
-							</div>
+	
 						</div>
 					</div>
 					<div class="cart-single-checkout" id='receipt2'>
 						<div class="check-data">	
 							<!-- <h4 class="pb-2">receipt 1</h4> -->
 							<div class="row">
-								<div class="col-lg-4 col-md-6 col-12">
+								<div class="col-4">
 									<p>Chef: Om Hassan</p>
 								</div>
-								<div class="col-lg-4 col-md-6 col-12">
+								<div class="col-4">
 									<p>Check No: 12345567</p>
+								</div>
+								<div class="col-4 delete-check" data-toggle="modal" data-target="#deleteWholeCheck">
+									<i class="icofont-trash"></i>
 								</div>
 							</div>
 						</div>	
@@ -843,7 +748,7 @@
                                             <a href="#">Product Text Here</a>
                                         </div>
                                     </td>
-                                    <td class="product-price" id='productPrice2'><span>50</span> AED</td>
+                                    <td class="product-price" id='productPrice2'><span>75</span> AED</td>
                                     <td class="product-number">
                                         <div class="cart-plus-minus">
                                             <div class="dec qtybutton">-</div>
@@ -851,7 +756,7 @@
                                             <div class="inc qtybutton">+</div>
                                         </div>
                                     </td>
-                                    <td class="product-total productTotal2" ><span>225</span> AED</td>
+                                    <td class="product-total productTotal2" ><span>150</span> AED</td>
                                     <td>
                                         <a href="#" data-toggle="modal" data-target="#deleteMatbokh"><img src="assets/images/shop/del.png" alt="product"></a>
                                     </td>
@@ -903,17 +808,12 @@
                             </tbody>
 						</table>
 					
-						<div class="cart-overview">
-							<h4 class="px-3 mt-4">Cart Totals</h4>
+						<div class="cart-overview pb-3">
+							<h4 class="px-3 mt-4">Shipping Fees</h4>
 							<ul class="row">
+							
 								<li class="col-md-6 col-12">
-									<div class="allSubTotal">
-										<span class="pull-left">Cart Subtotal</span>
-										<p class="pull-right"><span>750</span> AED</p>
-									</div>
-								</li>
-								<li class="col-md-6 col-12">
-									<div class="allShipping">
+									<div class="ShippingCost">
 										<span class="pull-left">Shipping and Handling</span>
 										<p class="pull-right"><span>50</span> AED</p>
 									</div>
@@ -924,23 +824,291 @@
 										<p class="pull-right"><span>20</span> AED</p>
 									</div>
 								</li>
-								<li class="col-md-6 col-12">
-									<div class="finalTotal">
-										<span class="pull-left">TOTAL</span>
-										<p class="pull-right"><span>750</span> AED</p>
-									</div>
-								</li>
+					
 							</ul>
-							<div class="text-center mt-3 pb-1">
-								<div class="row mx-0">
-									<button class="col-md-4 offset-md-4 col-12 food-btn"> <span>Order</span></button>
-								</div>
-								<p class="px-3"> By clicking Order, you agree to our <a href="#">Terms & Conditions</a>
-								</p>
-							</div>
+						
 						</div>
 					</div>
 					
+
+					<div class="cart-single-checkout" id='receipt2'>
+						<div class="check-data">	
+							<!-- <h4 class="pb-2">receipt 1</h4> -->
+							<div class="row">
+								<div class="col-4">
+									<p>Chef: Om Hassan</p>
+								</div>
+								<div class="col-4">
+									<p>Check No: 12345567</p>
+								</div>
+								<div class="col-4 delete-check" data-toggle="modal" data-target="#deleteWholeCheck">
+									<i class="icofont-trash"></i>
+								</div>
+							</div>
+						</div>	
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Product</th>
+                                    <th>Price</th>
+                                    <th>Quantity</th>
+                                    <th>Total</th>
+                                    <th>Edit</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                        
+                                <tr class="products">
+                                    <td class="product-item">
+                                        <div class="p-thumb">
+                                            <a href="#"><img src="assets/images/popular-food/03.jpg" alt="product"></a>
+                                        </div>
+                                        <div class="p-content">
+                                            <a href="#">Product Text Here</a>
+                                        </div>
+                                    </td>
+                                    <td class="product-price" id='productPrice2'><span>75</span> AED</td>
+                                    <td class="product-number">
+                                        <div class="cart-plus-minus">
+                                            <div class="dec qtybutton">-</div>
+                                            <input class="cart-plus-minus-box" type="text" name="qtybutton" value="2">
+                                            <div class="inc qtybutton">+</div>
+                                        </div>
+                                    </td>
+                                    <td class="product-total productTotal2" ><span>150</span> AED</td>
+                                    <td>
+                                        <a href="#" data-toggle="modal" data-target="#deleteMatbokh"><img src="assets/images/shop/del.png" alt="product"></a>
+                                    </td>
+                                </tr>
+                                <tr class="products">
+                                    <td class="product-item">
+                                        <div class="p-thumb">
+                                            <a href="#"><img src="assets/images/popular-food/04.jpg" alt="product"></a>
+                                        </div>
+                                        <div class="p-content">
+                                            <a href="#">Product Text Here</a>
+                                        </div>
+                                    </td>
+                                    <td class="product-price" id='productPrice2'><span>100</span> AED</td>
+                                    <td class="product-number">
+                                        <div class="cart-plus-minus">
+                                            <div class="dec qtybutton">-</div>
+                                            <input class="cart-plus-minus-box" type="text" name="qtybutton" value="2">
+                                            <div class="inc qtybutton">+</div>
+                                        </div>
+                                    </td>
+                                    <td class="product-total productTotal2" ><span>200</span> AED</td>
+                                    <td>
+                                        <a href="#" data-toggle="modal" data-target="#deleteMatbokh"><img src="assets/images/shop/del.png" alt="product"></a>
+                                    </td>
+                                </tr>
+                                <tr class="products">
+                                    <td class="product-item">
+                                        <div class="p-thumb">
+                                            <a href="#"><img src="assets/images/popular-food/05.jpg" alt="product"></a>
+                                        </div>
+                                        <div class="p-content">
+                                            <a href="#">Product Text Here</a>
+                                        </div>
+                                    </td>
+                                    <td class="product-price" id='productPrice2'><span>200</span> AED</td>
+                                    <td class="product-number">
+                                        <div class="cart-plus-minus">
+                                            <div class="dec qtybutton">-</div>
+                                            <input class="cart-plus-minus-box" type="text" name="qtybutton" value="2">
+                                            <div class="inc qtybutton">+</div>
+                                        </div>
+                                    </td>
+                                    <td class="product-total productTotal2"><span>400</span> AED</td>
+                                    <td>
+                                        <a href="#" data-toggle="modal" data-target="#deleteMatbokh"><img src="assets/images/shop/del.png" alt="product"></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+						</table>
+					
+						<div class="cart-overview pb-3">
+							<h4 class="px-3 mt-4">Shipping Fees</h4>
+							<ul class="row">
+							
+								<li class="col-md-6 col-12">
+									<div class="ShippingCost">
+										<span class="pull-left">Shipping and Handling</span>
+										<p class="pull-right"><span>10</span> AED</p>
+									</div>
+								</li>
+								<li class="col-md-6 col-12" style="display: none;">
+									<div class="cashOnDelLabel">
+										<span class="pull-left">Cash On Delivery</span>
+										<p class="pull-right"><span>20</span> AED</p>
+									</div>
+								</li>
+					
+							</ul>
+						
+						</div>
+					</div>
+
+					<!-- <div class="cart-details pb-4">
+                        <div class="shiping-box">
+                            <div class="row mb-5">
+                                <div class="col-md-6 col-12">
+                                    
+									
+									
+								</div>
+                                <div class="col-md-6 col-12">
+									
+									
+								</div>
+								<div class="col-sm-4 offset-sm-4 col-12 offset-0 mt-5">
+									<button class="col-12 food-btn style-2"> <span>Save</span></button>
+								</div>
+                            </div>
+                        </div>
+                    </div> -->
+					<div class='cart-ordering'>
+						<div class="row">
+							<div class="col-md-6 col-12">
+								<div class="delivery-info">
+									<h5>Delivery Options</h5>
+		
+									<div class="form-check">
+										<input type="radio" name='howToPay' value='onDelivery' class='howToPay form-check-input'>
+										 <label class="form-check-label">Cash On Delivery</label>
+									</div>
+									<div class="payMethod animated fadeIn mb-4"  id='onDelivery'>
+									<div class="theme-color">20 AED Fees</div>
+									</div>
+		
+									<div class="form-check">
+										
+											<input type="radio" name='howToPay' value='bankTransfer' class='howToPay form-check-input'> 
+											<label class="form-check-label">Bank Transfer</label>
+		
+									</div>
+									<div class="payMethod animated fadeIn"  id='bankTransfer'>
+										<h6>Payment</h6>
+									<div class="outline-select">
+										<select class="chooseBank">
+											<option value="EmirateBank">Choose Bank..</option>
+											<option value="AbudhabiBank">Abu dhabi Commercial Bank</option>
+											<option value="DubaiBank">Dubai Islamic Bank</option>
+										</select>
+										<span class="select-icon"><i class="icofont-caret-down"></i></span>
+									</div>
+									<div class="bankAccount" id='AbudhabiBank'>
+										<p>Account Number: 11310217910001 <br>
+											NAME: MAHMOUD ABDELFATTAH <br>
+											IBAN: AE840030011310217910001 <br></p>
+											<div class="photo-groups">
+												<p class="mb-1">Upload photo of bank receipt</p>
+											<div class="upload-photo mx-3">
+												
+												<div class="photo-mat-icon">
+													Upload
+												</div>
+												<input type="file" class="photo-mat-file" accept="image/*" hidden="">
+												<span class="photo-mat-src"></span>
+											</div>
+											</div>
+									</div>
+									<div class="bankAccount" id='DubaiBank'>
+										<p>Account Number: 009580143455001 <br>
+											NAME: MAHMOUD ABDELFATTAH <br>
+											IBAN Number: AE640240009580143455001 <br>
+											</p>
+											<div class="photo-groups">
+												<p class="mb-1">Upload photo of bank receipt</p>
+											<div class="upload-photo">
+												
+												<div class="photo-mat-icon mx-2">
+													Upload
+												</div>
+												<input type="file" class="photo-mat-file" accept="image/*" hidden="">
+												<span class="photo-mat-src"></span>
+											</div>
+											</div>
+									</div>
+									</div>
+								</div>
+								<div class="contact-info mt-4">
+									<h5>Contact Details</h5>
+									<div class="form-group">
+										<input type="text" name="fullName" placeholder="Full Name" class="form-control full-name"/>	
+
+									</div>
+									<input type="text" name="phoneNumber" placeholder="Phone Number" class="form-control phone-number"/>	
+							   
+						   
+								</div>
+								<div class="deliveryTo mt-4">
+									<h5>Delivery To..</h5>
+									<div class="outline-select">
+										<select>
+											<option value="volvo">Choose Emirate</option>
+											<option value="saab">Abu dhabi</option>
+											<option value="saab">Dubai</option>
+										</select>
+										<span class="select-icon"><i class="icofont-caret-down"></i></span>
+									</div>
+									
+
+									<div class="outline-select">
+										<select>
+											<option value="volvo">Choose Area..</option>
+											<option value="saab">Area</option>
+										</select>
+										<span class="select-icon"><i class="icofont-caret-down"></i></span>
+									</div>
+									<div class="form-group">
+										<textarea placeholder="Detailed Address"  class="detailedAdd" rows='3'></textarea>
+									</div>
+								</div>
+							</div>
+
+							<div class="col-md-6 col-12">
+								<div class="cart-overview">
+									<h4 class="px-3 mt-4">Cart Totals</h4>
+									<ul>
+										<li>
+											<div class="allSubTotal">
+												<span class="pull-left">Cart Subtotal</span>
+												<p class="pull-right"><span>750</span> AED</p>
+											</div>
+										</li>
+										<li >
+											<div class="allShipping">
+												<span class="pull-left">Shipping and Handling</span>
+												<p class="pull-right"><span>50</span> AED</p>
+											</div>
+										</li>
+										<li style="display: none;">
+											<div class="allCashOnDelLabel">
+												<span class="pull-left">Cash On Delivery</span>
+												<p class="pull-right"><span>20</span> AED</p>
+											</div>
+										</li>
+										<li>
+											<div class="finalTotal">
+												<span class="pull-left">TOTAL</span>
+												<p class="pull-right"><span>750</span> AED</p>
+											</div>
+										</li>
+									</ul>
+									<div class="text-center mt-3 pb-1">
+										<div class="row mx-0">
+											<button class="col-12 food-btn"> <span>Order</span></button>
+										</div>
+										<p class="px-3"> By clicking Order, you agree to our <a href="#">Terms & Conditions</a>
+										</p>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					
+					</div>
                    
                 </div>
             </div>
@@ -998,17 +1166,17 @@
 		<script src="assets/js/functions.js"></script>
 		<script>
 		
-				$(function(){
-					let counter=1;
-					let singleCheckout=$('.cart-single-checkout');
-					for(let i=0; i<singleCheckout.length; i++){
-						console.log((singleCheckout+counter));
-						counter++;
-						for(let j=1;j<=($('.productTotal'+i)).length;j++){
-							console.log($('.productTotal'+i).html());
-						}
-					}
-				});
+				// $(function(){
+				// 	let counter=1;
+				// 	let singleCheckout=$('.cart-single-checkout');
+				// 	for(let i=0; i<singleCheckout.length; i++){
+				// 		console.log((singleCheckout+counter));
+				// 		counter++;
+				// 		for(let j=1;j<=($('.productTotal'+i)).length;j++){
+				// 			console.log($('.productTotal'+i).html());
+				// 		}
+				// 	}
+				// });
 			
 		</script>
 	</body>

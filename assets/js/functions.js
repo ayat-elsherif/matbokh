@@ -305,8 +305,10 @@
        $('#'+switchClass).css('display','block');
        if(switchClass=="onDelivery"){
             $('.cashOnDelLabel').parent().css('display','block');
+            $('.allCashOnDelLabel').parent().css('display','block');
        }else{
-        $('.cashOnDelLabel').parent().css('display','block');
+        $('.cashOnDelLabel').parent().css('display','none');
+        $('.allCashOnDelLabel').parent().css('display','none');
        }
        allTotal();
  });
@@ -372,12 +374,44 @@
         let productTotal=product.find('.product-total span');
                 
 		productTotal.text((productPrice * addProduct));
-		subTotal();
-		allTotal();
+        subTotal();
+        allTotal();
+        
 	});
 
-		subTotal();
-		allTotal();
+        subTotal();
+        allShipping();
+        allCashOnDelLabel();
+        allTotal();
+       
+
+
+        function allShipping(){
+			let singleShippingCost=$('.ShippingCost .pull-right span');
+            let allShippingCost=$('.allShipping .pull-right span');
+            let x=0;
+            for(let i = 0 ;i<singleShippingCost.length;i++){
+                x +=parseInt($(singleShippingCost[i]).text());
+                console.log(x);
+            }
+            allShippingCost.text(x);
+            console.log(allShippingCost.text());            
+        }
+
+        function allCashOnDelLabel(){
+			let cashOnDelLabel=$('.cashOnDelLabel .pull-right span');
+            let allCashOnDelLabel=$('.allCashOnDelLabel .pull-right span');
+            let x=0;
+            for(let i = 0 ;i<cashOnDelLabel.length;i++){
+                x +=parseInt($(cashOnDelLabel[i]).text());
+                console.log(x);
+            }
+            allCashOnDelLabel.text(x);
+            console.log(allCashOnDelLabel.text());            
+        }
+        
+
+
 		function subTotal(){
 			let singleProductTotal=$('.product-total span');
 		let allSubTotal=$('.allSubTotal .pull-right span');
@@ -391,15 +425,16 @@
 	function allTotal(){
 		let allSubTotal=$('.allSubTotal .pull-right span').text();
 		let allShipping=$('.allShipping .pull-right span').text();
-		let cashOnDelLabel=$('.cashOnDelLabel .pull-right span').text();
+		let cashOnDelLabel=$('.allCashOnDelLabel .pull-right span').text();
 		let finalTotal=$('.finalTotal .pull-right span');
 		if($('.cashOnDelLabel').parent().css('display')=='block'){
 			let summation= parseInt(allSubTotal) + parseInt(allShipping) +parseInt(cashOnDelLabel);
-			finalTotal.text(summation);
+            finalTotal.text(summation);
 		}
 		else if($('.cashOnDelLabel').parent().css('display')=='none'){
-			let x= parseInt(allSubTotal) + parseInt(allShipping);
-			finalTotal.text(x);
+            let x= parseInt(allSubTotal) + parseInt(allShipping);
+     
+            finalTotal.text(x);
 		}	
 	}
     
@@ -422,7 +457,6 @@
              $(this).parents('.p-food-item').css('opacity','.6');
            }
     });
-
 
     
 }(jQuery));
