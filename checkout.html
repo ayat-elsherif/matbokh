@@ -132,7 +132,7 @@
 		  </div>
 
 
-		  <div class="modal fade" id="deleteWholeCheck" tabindex="-1" role="dialog" aria-labelledby="deleteMatbokhLabel" aria-hidden="true">
+		  <div class="modal fade" id="deleteWholeCheck" tabindex="-1" role="dialog" aria-labelledby="deleteWholeCheckLabel" aria-hidden="true">
 			<div class="modal-dialog" role="document">
 			  <div class="modal-content">
 				
@@ -151,6 +151,22 @@
 								  </button>
 							  </div>
 					  </div>
+					  
+				</div>
+			  </div>
+			</div>
+		  </div>
+		  <div class="modal fade" id="DeliveryPolicy" tabindex="-1" role="dialog" aria-labelledby="DeliveryPolicyLabel" aria-hidden="true">
+			<div class="modal-dialog" role="document">
+			  <div class="modal-content">
+				
+				<div class="modal-body">
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true"><i class="icofont-close-line"></i></span>
+					  </button>
+					<div>
+						<h3>Here goes the Policies</h3>
+					</div>
 					  
 				</div>
 			  </div>
@@ -599,13 +615,16 @@
                     <div class="cart-single-checkout" id='receipt1'>
 						<div class="check-data">	
 							<div class="row">
-								<div class="col-4">
+								<div class="col-3">
 									<p>Chef: Nehal Ahmed</p>
 								</div>
-								<div class="col-4">
+								<div class="col-3">
 									<p>Check No: 12345575</p>
 								</div>
-								<div class="col-4 delete-check" data-toggle="modal" data-target="#deleteWholeCheck">
+								<div class="col-3">
+									<p>Location: Giza, Haram</p>
+								</div>
+								<div class="col-3 delete-check" data-toggle="modal" data-target="#deleteWholeCheck">
 									<i class="icofont-trash"></i>
 								</div>
 							</div>
@@ -716,13 +735,16 @@
 						<div class="check-data">	
 							<!-- <h4 class="pb-2">receipt 1</h4> -->
 							<div class="row">
-								<div class="col-4">
+								<div class="col-3">
 									<p>Chef: Om Hassan</p>
 								</div>
-								<div class="col-4">
+								<div class="col-3">
 									<p>Check No: 12345567</p>
 								</div>
-								<div class="col-4 delete-check" data-toggle="modal" data-target="#deleteWholeCheck">
+								<div class="col-3">
+									<p>Location: Giza, Haram</p>
+								</div>
+								<div class="col-3 delete-check" data-toggle="modal" data-target="#deleteWholeCheck">
 									<i class="icofont-trash"></i>
 								</div>
 							</div>
@@ -814,13 +836,16 @@
 						<div class="check-data">	
 							<!-- <h4 class="pb-2">receipt 1</h4> -->
 							<div class="row">
-								<div class="col-4">
+								<div class="col-3">
 									<p>Chef: Om Hassan</p>
 								</div>
-								<div class="col-4">
+								<div class="col-3">
 									<p>Check No: 12345567</p>
 								</div>
-								<div class="col-4 delete-check" data-toggle="modal" data-target="#deleteWholeCheck">
+								<div class="col-3">
+									<p>Location: Giza, Haram</p>
+								</div>
+								<div class="col-3 delete-check" data-toggle="modal" data-target="#deleteWholeCheck">
 									<i class="icofont-trash"></i>
 								</div>
 							</div>
@@ -1075,6 +1100,10 @@
 											</div>
 										</li>
 									</ul>
+									<p class="form-group form-check DeliveryPolicy">
+										<input type="checkbox" class="form-check-input" >
+										<label class="form-check-label"> I read all the <a href="#" data-toggle="modal" data-target="#DeliveryPolicy">delivery policy</a> and I accept them.</label>
+									</p>
 									<div class="text-center mt-3 pb-1">
 										<div class="row mx-0">
 											<button class="col-12 food-btn"> <span>Order</span></button>
